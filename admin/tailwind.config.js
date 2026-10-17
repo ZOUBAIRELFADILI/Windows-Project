@@ -18,7 +18,7 @@ export default {
         line: '#E2E8F0',
         muted: '#64748B',
       },
-      fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+      fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'], serif: ['Fraunces', 'Georgia', 'serif'] },
       borderRadius: { card: '1rem' },
       boxShadow: {
         card: '0 1px 3px 0 rgba(15,23,42,.05), 0 1px 2px -1px rgba(15,23,42,.05)',

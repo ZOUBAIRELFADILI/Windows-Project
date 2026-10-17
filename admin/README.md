@@ -1,4 +1,4 @@
-# Admin panel — Fenêtres Pro
+# Admin panel — Ouvria
 
 Clickable mockup of the admin space. No backend yet: demo data lives in `src/data/mock.ts`, and every change you
 make is kept in your browser (localStorage). **Paramètres → Réinitialiser** restores the demo data.

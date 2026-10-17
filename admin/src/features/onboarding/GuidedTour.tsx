@@ -38,7 +38,7 @@ export function GuidedTour() {
         <div className="flex-1">
           {step < 0 ? (
             <>
-              <p className="font-semibold">Bienvenue sur Fenêtres Pro !</p>
+              <p className="font-semibold">Bienvenue sur Ouvria !</p>
               <p className="mt-1 text-sm text-slate-300">Découvrez votre espace d’administration en 4 étapes.</p>
             </>
           ) : (

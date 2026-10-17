@@ -29,10 +29,10 @@ export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void 
       >
         <div className="flex items-center justify-between px-5 py-5">
           <div className="flex items-center gap-3">
-            <div className="grid h-10 w-10 place-items-center rounded-lg bg-brand-600 font-bold text-white">FP</div>
+            <img src="/brand/ouvria-symbol-light.svg" alt="" className="h-9 w-auto" />
             <div>
-              <p className="font-semibold leading-tight text-white">Fenêtres Pro</p>
-              <p className="text-[11px] uppercase tracking-wider text-slate-400">Sur mesure</p>
+              <p className="font-serif text-lg font-semibold leading-tight text-white">Ouvria</p>
+              <p className="text-[11px] uppercase tracking-wider text-slate-400">Administration</p>
             </div>
           </div>
           <button className="rounded p-1 text-slate-400 hover:text-white lg:hidden" onClick={onClose} aria-label="Fermer le menu">

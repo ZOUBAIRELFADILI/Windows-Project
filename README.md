@@ -1,4 +1,8 @@
-# Fenêtres Pro — made-to-measure windows configurator
+# Ouvria — made-to-measure windows configurator
+
+![Ouvria](design/brand/ouvria-logo.svg)
+
+*Vos ouvertures, sur mesure.*
 
 E-commerce for made-to-measure windows and bay windows ("sur mesure"): the customer configures the product step by step and the price is calculated automatically.
 
@@ -8,6 +12,7 @@ E-commerce for made-to-measure windows and bay windows ("sur mesure"): the custo
 .
 ├── admin/          ← Admin panel (React + TypeScript + Vite + Tailwind) — clickable mockup with a real price engine
 ├── design/
+│   ├── brand/      ← Ouvria logos (SVG): full, dark, mono, symbol, app icon, favicon
 │   ├── DESIGN.md   ← Design system (colors, typography, components) exported from Google Stitch
 │   └── stitch/     ← Original Stitch exports (static HTML + screenshot per screen), kept as reference
 └── README.md
