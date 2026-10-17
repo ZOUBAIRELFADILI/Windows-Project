@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply bg-canvas text-ink;
+  }
+  /* DESIGN.md: tabular figures everywhere numbers update live */
+  .tabular-nums,
+  table {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.tour-highlight {
+  position: relative;
+  z-index: 45;
+  outline: 3px solid #2563eb;
+  outline-offset: 4px;
+  border-radius: 1rem;
+  box-shadow: 0 0 0 9999px rgba(15, 23, 42, 0.35);
+}
