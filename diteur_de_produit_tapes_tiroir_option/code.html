@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-fixed":"#dbe1ff","tertiary-container":"#007d55","on-secondary-container":"#5c647a","tertiary":"#006242","surface-container-high":"#dce9ff","background":"#f8f9ff","on-primary-fixed-variant":"#003ea8","primary-fixed-dim":"#b4c5ff","on-primary-container":"#eeefff","primary":"#004ac6","surface-dim":"#cbdbf5","tertiary-fixed":"#6ffbbe","tertiary-fixed-dim":"#4edea3","surface-container-low":"#eff4ff","surface-tint":"#0053db","on-tertiary-container":"#bdffdb","outline":"#737686","primary-container":"#2563eb","on-tertiary":"#ffffff","on-secondary":"#ffffff","on-secondary-fixed-variant":"#3f465c","surface-bright":"#f8f9ff","surface":"#f8f9ff","surface-container-lowest":"#ffffff","secondary-container":"#dae2fd","secondary":"#565e74","on-primary-fixed":"#00174b","on-tertiary-fixed-variant":"#005236","on-surface":"#0b1c30","secondary-fixed-dim":"#bec6e0","on-surface-variant":"#434655","inverse-surface":"#213145","surface-variant":"#d3e4fe","error-container":"#ffdad6","surface-container":"#e5eeff","on-primary":"#ffffff","error":"#ba1a1a","inverse-on-surface":"#eaf1ff","on-background":"#0b1c30","surface-container-highest":"#d3e4fe","on-error-container":"#93000a","on-tertiary-fixed":"#002113","inverse-primary":"#b4c5ff","on-secondary-fixed":"#131b2e","secondary-fixed":"#dae2fd","outline-variant":"#c3c6d7","on-error":"#ffffff"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"margin":"2rem","space-xs":"0.25rem","margin-mobile":"1rem","space-sm":"0.5rem","space-lg":"1.5rem","space-xl":"2rem","gutter-sm":"1rem","space-md":"1rem","gutter":"1.5rem"},fontFamily:{"body-lg":["Inter"],"label-md":["Inter"],"headline-sm":["Inter"],"label-sm":["Inter"],"code":["Inter"],"body-sm":["Inter"],"label-lg":["Inter"],"body-md":["Inter"],"headline-lg":["Inter"],"headline-md":["Inter"],"display-lg":["Inter"]},fontSize:{"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"500"}],"code":["12px",{"lineHeight":"16px","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-lg":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}};</script></head><body class="bg-background text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-inverse-surface z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[20px]">window</span></div><div class="flex flex-col min-w-0"><span class="font-label-lg text-label-lg text-inverse-on-surface truncate tracking-tight">Fenêtres Pro</span><span class="font-label-sm text-label-sm text-outline-variant uppercase tracking-wider">Sur Mesure</span></div></div><div class="px-space-md py-space-sm"><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-lg rounded-lg"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="tableau-de-bord" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Tableau de bord</span></a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm transition-colors bg-primary-container text-on-primary font-label-lg rounded-lg" data-path="produits" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span>Produits</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="bibliotheque-doptions" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span>Bibliothèque d'options</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="promotions" href="#"><span class="material-symbols-outlined text-[20px]">local_offer</span><span>Promotions</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="commandes" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span>Commandes</span></div><span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">12</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="parametres" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Paramètres</span></a></nav></div></div><div class="p-space-md flex flex-col gap-space-xs"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="guides-et-aide" href="#"><span class="material-symbols-outlined text-[20px]">help</span><span>Besoin d'aide ?</span></a><button class="w-full flex items-center justify-center gap-space-sm px-space-md py-space-sm rounded-lg bg-surface-variant text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" type="button"><span class="material-symbols-outlined text-[18px]">play_circle</span><span>Visite guidée</span></button></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 z-40 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-xl flex items-center justify-between gap-space-lg"><div class="flex-1 max-w-md relative"><span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span><input class="w-full h-10 pl-10 pr-space-md rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none" placeholder="Rechercher un produit, une commande..." type="text"/></div><div class="flex items-center gap-space-lg shrink-0"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Brouillon sauvegardé</span></div><a class="flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">open_in_new</span><span>Aperçu boutique</span></a><button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-secondary-container text-on-secondary-fixed-variant hover:bg-surface-container-high transition-colors font-label-md text-label-md" type="button"><span class="material-symbols-outlined text-primary text-[18px]">auto_awesome</span><span>Assistant IA</span></button><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden xl:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface leading-none">AD</span><span class="font-label-sm text-label-sm text-outline leading-tight">Admin Propriétaire</span></div></div></div></div></header><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Command & Status Sub-header -->
+<div class="w-full bg-surface-container-lowest px-margin py-space-md shadow-sm">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<!-- Breadcrumb & Title Cluster -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-outline">
+<a class="hover:text-primary transition-colors" href="#">Produits</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface">Baies Vitrées & Coulissants</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-semibold">Baie accordéon Bois-Alu</span>
+</div>
+<div class="flex items-center gap-space-md flex-wrap">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Baie accordéon Bois-Alu</h1>
+<div class="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>Brouillon</span>
+</div>
+<span class="font-code text-code text-outline bg-surface-container-low px-2 py-0.5 rounded">REF: BAC-WOODALU-2025</span>
+</div>
+</div>
+<!-- Action Toolbar -->
+<div class="flex items-center gap-space-sm self-start lg:self-center">
+<button class="flex items-center gap-space-xs px-3.5 py-2 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-variant font-label-md text-label-md transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">visibility</span>
+<span>Tester comme un client</span>
+</button>
+<button class="flex items-center gap-space-xs px-3.5 py-2 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-variant font-label-md text-label-md transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+<span>Dupliquer</span>
+</button>
+<button class="flex items-center gap-space-xs px-5 py-2 rounded-lg bg-primary-container text-on-primary hover:bg-primary transition-all shadow-md font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[18px]">publish</span>
+<span>Publier l'article</span>
+</button>
+</div>
+</div>
+<!-- Main Navigation Tabs -->
+<div class="flex items-center gap-space-xl mt-space-md pt-space-xs border-t-0 font-label-lg text-label-lg overflow-x-auto">
+<button class="flex items-center gap-space-xs py-2 text-primary font-semibold relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-primary" type="button">
+<span class="material-symbols-outlined text-[18px]">format_list_bulleted</span>
+<span>Étapes & options</span>
+<span class="ml-1 px-1.5 py-0.2 rounded-full bg-primary-fixed text-on-primary-fixed text-label-sm font-code">10</span>
+</button>
+<button class="flex items-center gap-space-xs py-2 text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+<span>Prix & Marges</span>
+</button>
+<button class="flex items-center gap-space-xs py-2 text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">schema</span>
+<span>Règles d'incompatibilité</span>
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+</button>
+<button class="flex items-center gap-space-xs py-2 text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">play_circle</span>
+<span>Simulateur & Test</span>
+</button>
+</div>
+</div>
+<!-- Main 3-Column Split Workbench -->
+<div class="px-margin py-space-lg w-full">
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Reorderable Steps List (Width 3/12) -->
+<div class="xl:col-span-3 flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Étapes du configurateur</h2>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-semibold">10</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px] cursor-help" title="Faites glisser pour réordonner les étapes">help_outline</span>
+</div>
+<!-- Draggable Step Items Container -->
+<div class="flex flex-col gap-space-xs" id="stepList">
+<!-- Step 1 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-colors shadow-sm cursor-pointer group">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-[16px] text-outline group-hover:text-on-surface shrink-0 cursor-grab">drag_indicator</span>
+<span class="w-5 h-5 rounded-full bg-surface-container-high text-on-surface-variant font-code text-label-sm flex items-center justify-center shrink-0">1</span>
+<span class="font-body-md text-body-md text-on-surface truncate">Variante de base</span>
+</div>
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0">check_circle</span>
+</div>
+<!-- Step 2 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-colors shadow-sm cursor-pointer group">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-[16px] text-outline group-hover:text-on-surface shrink-0 cursor-grab">drag_indicator</span>
+<span class="w-5 h-5 rounded-full bg-surface-container-high text-on-surface-variant font-code text-label-sm flex items-center justify-center shrink-0">2</span>
+<span class="font-body-md text-body-md text-on-surface truncate">Matière & Structure</span>
+</div>
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0">check_circle</span>
+</div>
+<!-- Step 3 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-colors shadow-sm cursor-pointer group">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-[16px] text-outline group-hover:text-on-surface shrink-0 cursor-grab">drag_indicator</span>
+<span class="w-5 h-5 rounded-full bg-surface-container-high text-on-surface-variant font-code text-label-sm flex items-center justify-center shrink-0">3</span>
+<span class="font-body-md text-body-md text-on-surface truncate">Profilé aluminium</span>
+</div>
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0">check_circle</span>
+</div>
+<!-- Step 4: ACTIVE / SELECTED -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low ring-2 ring-primary transition-all shadow-md cursor-pointer">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-[16px] text-primary shrink-0 cursor-grab">drag_indicator</span>
+<span class="w-5 h-5 rounded-full bg-primary text-on-primary font-code text-label-sm flex items-center justify-center shrink-0 font-bold">4</span>
+<span class="font-label-lg text-label-lg text-primary truncate">Choix du bois</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="px-1.5 py-0.5 rounded bg-primary-fixed text-on-primary-fixed-variant text-label-sm font-semibold">5 opts</span>
+<span class="material-symbols-outlined text-primary text-[18px]">chevron_right</span>
+</div>
+</div>
+<!-- Step 5 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-colors shadow-sm cursor-pointer group">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-[16px] text-outline group-hover:text-on-surface shrink-0 cursor-grab">drag_indicator</span>
+<span class="w-5 h-5 rounded-full bg-surface-container-high text-on-surface-variant font-code text-label-sm flex items-center justify-center shrink-0">5</span>
+<span class="font-body-md text-body-md text-on-surface truncate">Couleurs aluminium</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px] shrink-0">palette</span>
+</div>
+<!-- Step 6 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-colors shadow-sm cursor-pointer group">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-[16px] text-outline group-hover:text-on-surface shrink-0 cursor-grab">drag_indicator</span>
+<span class="w-5 h-5 rounded-full bg-surface-container-high text-on-surface-variant font-code text-label-sm flex items-center justify-center shrink-0">6</span>
+<span class="font-body-md text-body-md text-on-surface truncate">Nombre de vantaux</span>
+</div>
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0">check_circle</span>
+</div>
+<!-- Step 7 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-colors shadow-sm cursor-pointer group">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-[16px] text-outline group-hover:text-on-surface shrink-0 cursor-grab">drag_indicator</span>
+<span class="w-5 h-5 rounded-full bg-surface-container-high text-on-surface-variant font-code text-label-sm flex items-center justify-center shrink-0">7</span>
+<span class="font-body-md text-body-md text-on-surface truncate">Schéma d'ouverture</span>
+</div>
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0">check_circle</span>
+</div>
+<!-- Step 8 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-colors shadow-sm cursor-pointer group">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-[16px] text-outline group-hover:text-on-surface shrink-0 cursor-grab">drag_indicator</span>
+<span class="w-5 h-5 rounded-full bg-surface-container-high text-on-surface-variant font-code text-label-sm flex items-center justify-center shrink-0">8</span>
+<span class="font-body-md text-body-md text-on-surface truncate">Dimensions sur-mesure</span>
+</div>
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0">check_circle</span>
+</div>
+<!-- Step 9 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-colors shadow-sm cursor-pointer group">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-[16px] text-outline group-hover:text-on-surface shrink-0 cursor-grab">drag_indicator</span>
+<span class="w-5 h-5 rounded-full bg-surface-container-high text-on-surface-variant font-code text-label-sm flex items-center justify-center shrink-0">9</span>
+<span class="font-body-md text-body-md text-on-surface truncate">Performances vitrage</span>
+</div>
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0">check_circle</span>
+</div>
+<!-- Step 10 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-colors shadow-sm cursor-pointer group">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-[16px] text-outline group-hover:text-on-surface shrink-0 cursor-grab">drag_indicator</span>
+<span class="w-5 h-5 rounded-full bg-surface-container-high text-on-surface-variant font-code text-label-sm flex items-center justify-center shrink-0">10</span>
+<span class="font-body-md text-body-md text-on-surface truncate">Poignées & Accessoires</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[18px] shrink-0">radio_button_unchecked</span>
+</div>
+</div>
+<button class="w-full flex items-center justify-center gap-space-xs py-2.5 px-3 rounded-lg bg-surface-container text-primary hover:bg-surface-variant transition-colors font-label-md text-label-md shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Ajouter une étape</span>
+</button>
+</div>
+<!-- CENTER COLUMN: Step Details & Options Grid (Width 5/12) -->
+<div class="xl:col-span-5 flex flex-col gap-space-lg">
+<!-- Step Settings Header Card -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed-variant font-code text-label-sm font-bold">Étape 04</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Choix de l'essence de bois</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<button class="p-1.5 rounded-md hover:bg-surface-variant transition-colors" title="Paramètres d'affichage" type="button">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+<button class="p-1.5 rounded-md hover:bg-surface-variant transition-colors" title="Supprimer l'étape" type="button">
+<span class="material-symbols-outlined text-[20px] text-error">delete</span>
+</button>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Sélectionnez les bois nobles certifiés PEFC/FSC compatibles avec l'ossature extérieure en aluminium thermolaqué de cette baie repliable.
+          </p>
+<!-- Quick Step Controls -->
+<div class="grid grid-cols-2 gap-space-md pt-space-xs">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Mode de sélection client</label>
+<div class="px-3 py-2 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface flex items-center justify-between">
+<span>Choix unique (Radio)</span>
+<span class="material-symbols-outlined text-[18px] text-outline">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Champ requis</label>
+<div class="px-3 py-2 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface flex items-center justify-between">
+<span class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>Obligatoire</span>
+</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary">toggle_on</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Options Management Action Bar -->
+<div class="flex items-center justify-between gap-space-sm flex-wrap">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface">5 options configurées</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-outline text-label-sm font-semibold">Toutes actives</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">library_add</span>
+<span>Depuis la bibliothèque</span>
+</button>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary transition-colors font-label-md text-label-md shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Nouvelle option</span>
+</button>
+</div>
+</div>
+<!-- Options Cards Mosaic -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Option 1: Pin Sylvestre -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-all shadow-sm flex flex-col justify-between group cursor-pointer">
+<div class="flex flex-col gap-space-sm">
+<div class="relative w-full h-32 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Macro photo of natural pine wood grain texture with warm golden tones and subtle knots, high resolution woodworking photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNgDp_Do6bEcE1vIxhmwHskkWKZIdcyVMMNR2jBpDMq8hSDAxq5Gm-rfWnQZdgoVATSfiGbkQFVZbcvlWlbnN7labzR1aEU7El_AG7dSUGH0sOHE6usVoqjA5K3tvxw-sILbDlQCj2clOlI_BWgofVSzbI_bR8tKqZUhqyCHklPsAYC24Stfws-_7tzO63zr-OCacOk84VZo8g4cUXxbePpj2xCv6nOKpz8necSYUDRM0O1LVMkp8"/>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-code text-label-sm font-semibold shadow-sm">Défaut</span>
+</div>
+<div class="flex items-start justify-between">
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface">Pin Sylvestre</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Origine Europe du Nord, traitement classe 3</p>
+</div>
+<button class="text-outline hover:text-on-surface p-1" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="px-2 py-1 rounded bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm font-bold">Inclus</span>
+<span class="font-code text-code text-outline">+ 0,00 €</span>
+</div>
+</div>
+<!-- Option 2: Sapin Blanc -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-all shadow-sm flex flex-col justify-between group cursor-pointer">
+<div class="flex flex-col gap-space-sm">
+<div class="relative w-full h-32 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Close up of pale white fir timber texture, clean Scandinavian minimalist wood grain with subtle light striations" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGHoNrkYHqtM5ONPi2AAXhJbJfQsdt1avSvQeUr5Mi2o1rCV3MRSpp--ZmCfCNJTjyjyUrQporbt-q-DfBvsof9l2lT4sX6Aw1gcFfV-AGXpcZtCFdrE22KqefyJ3I_ebwwsfvHLRc_RCroZs1rG5Cy0IBcQSzNX9wszHn8ua_zZj97vJAR4huLpWS6No2Nf4OEE9eYDlBug4e0N7ogxPaEILItMctzIewTEreRswOj5-ABMwY51g"/>
+</div>
+<div class="flex items-start justify-between">
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface">Sapin Blanc</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Léger et lumineux, finition naturelle</p>
+</div>
+<button class="text-outline hover:text-on-surface p-1" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="px-2 py-1 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-bold">+ 10 %</span>
+<span class="font-code text-code text-outline">+ 245,00 €</span>
+</div>
+</div>
+<!-- Option 3: Meranti -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-all shadow-sm flex flex-col justify-between group cursor-pointer">
+<div class="flex flex-col gap-space-sm">
+<div class="relative w-full h-32 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Dark red meranti exotic hardwood board detail with deep rich mahogany veins, polished architectural timber" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArd-WZMPjMDNSKe25Vb3dEhANTtJqjqJ3umz2CHtbbbHCwad_touSLQgWK5hE3EQHKxof9etFobGSM5Q9pHGBYL9T9WxogxJO8tA9bCU2aPqrYgBDb3rnt4VdDnKxVxv9HMDCQmZqVjPndeHqci6PXAQ-By5VmYjYQ09Km_DXdAOxQ6hFoHd2g75n7SrKD5CMWhgKC733Lvrh75ApJB7Plb8aA9ouUocc3Ev7IryrT7HjTp8GdPRw"/>
+</div>
+<div class="flex items-start justify-between">
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface">Méranti Rouge</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Bois exotique dense, imputrescible</p>
+</div>
+<button class="text-outline hover:text-on-surface p-1" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="px-2 py-1 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-bold">+ 20 %</span>
+<span class="font-code text-code text-outline">+ 490,00 €</span>
+</div>
+</div>
+<!-- Option 4: Eucalyptus -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-all shadow-sm flex flex-col justify-between group cursor-pointer">
+<div class="flex flex-col gap-space-sm">
+<div class="relative w-full h-32 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Smooth eucalyptus wood surface texture with honey caramel undertones, fine architectural wood grain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7DIuNufZyeB4Hp0xIOIzspALRwOoIFb5RvjbbTrYYgWtaGr2ampbJNTFWDGwhYlMK129fosuMnDHix5e9mG-pMx6NzN0N4LAwXhsbbmAJxP_yrU6KYMiRwMSu7BardfF-mdn78OPnBnmpe_-M2vYAlJISFeIfWLhaz3nq9fC4p3kF-_Jfr55ED5rvYugyZM1iNwGVHXLx4sSXvB7wIYNUrI_QnqQfwi5j-oezYfGM6kMQ1t_oTPg"/>
+</div>
+<div class="flex items-start justify-between">
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface">Eucalyptus Globulus</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Haute dureté Brinell, ultra-résistant</p>
+</div>
+<button class="text-outline hover:text-on-surface p-1" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="px-2 py-1 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-bold">+ 40 %</span>
+<span class="font-code text-code text-outline">+ 980,00 €</span>
+</div>
+</div>
+<!-- Option 5: Chêne Massif (SELECTED / ACTIVE FOR DRAWER) -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest ring-2 ring-primary transition-all shadow-md flex flex-col justify-between cursor-pointer relative col-span-1 sm:col-span-2">
+<div class="absolute -top-2.5 right-4 px-2 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">edit</span>
+<span>En cours de modification</span>
+</div>
+<div class="flex flex-col sm:flex-row gap-space-md items-center">
+<div class="w-full sm:w-44 h-28 rounded-lg overflow-hidden bg-surface-container shrink-0">
+<img class="w-full h-full object-cover" data-alt="Refined European oak wood surface with golden honey reflections, prominent grain structure and silky matte varnish finish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSWQIRoiLtZEIxntc2er8Vk2aYRGmIemc9PcjaRfNXBEqBR6_TGZaQXZ-GuXI7QE7Ontk3h8BnQPIdCcORPA153B6oHfYJMq02g8O9YYHmWEpumxpzcZzlHKc5hnpKOo44cZlCxIehfhMArylZoHe3eK2B9mlzKmpJPhSx2l5e336sGspezQWd_dKhBL_HKloZVGVCOKMhyYZ_1spZigs1WK4w7BX9GCHWfEuPdm5yR_C2qRnCQO0"/>
+</div>
+<div class="flex flex-col gap-1 w-full">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">Chêne de France Massif</span>
+<span class="px-2 py-1 rounded bg-primary text-on-primary font-label-sm text-label-sm font-bold">+ 50 %</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Chêne noble de premier choix issu de forêts françaises éco-certifiées. Teinté et huilé selon le procédé multicouche hydrofuge.
+                </p>
+<div class="flex items-center gap-space-md mt-2 pt-2 text-on-surface-variant font-code text-code">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">check</span>
+<span>Synchronisé avec la bibliothèque</span>
+</span>
+<span>Impact prix estimé: + 1 225,00 €</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Real-Time Live Client Configurator Preview (Width 4/12) -->
+<div class="xl:col-span-4 flex flex-col gap-space-md sticky top-20">
+<!-- Live Preview Header & Responsive Switch -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-lg text-label-lg text-on-surface">Aperçu interactif client</span>
+</div>
+<!-- Device View Switcher -->
+<div class="flex items-center p-0.5 rounded-lg bg-surface-container-low">
+<button class="px-2 py-1 rounded-md text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1" title="Vue Ordinateur" type="button">
+<span class="material-symbols-outlined text-[16px]">desktop_windows</span>
+</button>
+<button class="px-2 py-1 rounded-md text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1" title="Vue Tablette" type="button">
+<span class="material-symbols-outlined text-[16px]">tablet</span>
+</button>
+<button class="px-2 py-1 rounded-md bg-surface-container-lowest text-primary font-label-sm text-label-sm flex items-center gap-1 shadow-sm font-semibold" title="Vue Smartphone" type="button">
+<span class="material-symbols-outlined text-[16px]">phone_iphone</span>
+<span>Mobile</span>
+</button>
+</div>
+</div>
+<!-- Interactive Mobile Chassis Simulator -->
+<div class="w-full flex justify-center py-space-sm">
+<div class="w-full max-w-[340px] rounded-3xl bg-inverse-surface p-3 shadow-xl">
+<div class="w-full rounded-2xl bg-surface-container-lowest overflow-hidden flex flex-col">
+<!-- Simulated Phone Top Bar -->
+<div class="h-6 px-4 bg-surface-container flex items-center justify-between text-on-surface-variant font-code text-[10px]">
+<span>09:41</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined text-[12px]">wifi</span>
+<span class="material-symbols-outlined text-[12px]">battery_full</span>
+</div>
+</div>
+<!-- Simulated Store Nav -->
+<div class="px-3 py-2 bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[18px]">window</span>
+<span class="font-headline-sm text-[13px] text-on-surface font-bold">Fenêtres Pro</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">shopping_bag</span>
+</div>
+<!-- Architectural 3D Rendering of Bi-fold Wood-Alu Door -->
+<div class="relative w-full h-44 bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Realistic 3D architectural rendering of a luxury modern wood aluminum bi-folding accordion patio door, with 4 folded glass panels open towards a sunlit outdoor garden terrace, warm oak wood interior frame, charcoal anthracite aluminum outer frame" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRR0hEp9uJqP4EKilYZ5h7fJizjIh1gBn1z7cBNQXf_xpnmn20YpDS2C0VXKCdMD8CP7A_e4BF-MZ266DU_1IEQaHuB3Q7571mM654H8_UPSpnQaO27Ys8EdyyhhczsHBKTlfCDVQDiVTZoKskcswiDWss3bEuQrupcNDsOEFyXWAYiLiHlZgjISiiK5zSSlyncDyoMkVg56qJK6_6vC-DeiF9PcJyCsMNQ1c6fVdXOQx7u-WlRL8"/>
+<div class="absolute bottom-2 left-2 px-2 py-0.5 rounded-full bg-inverse-surface/80 text-inverse-on-surface font-label-sm text-[10px] backdrop-blur-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-tertiary-fixed">360</span>
+<span>Vue 3D dynamique</span>
+</div>
+</div>
+<!-- Customer Selected Choices Summary -->
+<div class="p-3 flex flex-col gap-2 bg-surface-container-lowest">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[11px] text-outline uppercase tracking-wider">Étape 4 / 10</span>
+<span class="font-label-sm text-[11px] text-tertiary font-bold">Configuration valide</span>
+</div>
+<h4 class="font-headline-sm text-[14px] text-on-surface leading-snug">Baie accordéon Bois-Alu 4 vantaux</h4>
+<!-- Selected Chips Mini-List -->
+<div class="flex flex-wrap gap-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface text-[10px] font-medium">L 3200 × H 2250 mm</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface text-[10px] font-medium">RAL 7016 Gris Anthracite</span>
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed-variant text-[10px] font-bold">Chêne de France (+50%)</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface text-[10px] font-medium">Triple vitrage Ug 0.6</span>
+</div>
+<!-- Live Pricing Breakdown Container -->
+<div class="p-2.5 rounded-xl bg-surface-container-low mt-2 flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-body-sm text-[11px] text-on-surface-variant">
+<span>Prix structure de base HT</span>
+<span>4 900,00 €</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-[11px] text-on-surface-variant">
+<span>Option Chêne (+50%)</span>
+<span class="font-semibold text-primary">+ 1 225,00 €</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-[11px] text-on-surface-variant">
+<span>Vitrage sécurité acoustic</span>
+<span>+ 851,00 €</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-[11px] text-on-surface-variant">
+<span>TVA (20 %)</span>
+<span>1 395,20 €</span>
+</div>
+<div class="pt-1.5 mt-1 flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Total TTC</span>
+<div class="text-right">
+<span class="font-headline-lg text-[18px] text-primary font-bold">8 371,20 €</span>
+<p class="font-code text-[10px] text-tertiary">Livraison sur chantier offerte</p>
+</div>
+</div>
+</div>
+<button class="w-full py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold text-center mt-1" type="button">
+                    Étape suivante : Couleurs
+                  </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Inspector Quick Spec -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>Rendu WebGL v2.4</span>
+<span class="font-code text-on-surface">Calculateur d'options synchrone</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT-SIDE SLIDE-OVER DRAWER: Option Edit (Modifier l'option - Chêne) -->
+<div class="fixed inset-0 z-50 overflow-hidden flex justify-end" id="drawerOptionEdit">
+<!-- Backdrop Overlay -->
+<div class="fixed inset-0 bg-inverse-surface/40 backdrop-blur-sm transition-opacity"></div>
+<!-- Sliding Panel Canvas -->
+<div class="relative w-full max-w-lg bg-surface-container-lowest h-full shadow-2xl flex flex-col z-10 overflow-y-auto">
+<!-- Drawer Header -->
+<div class="p-space-lg bg-surface-container-lowest sticky top-0 z-20 flex items-start justify-between shadow-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">local_library</span>
+<span>Issu de la Bibliothèque d'options</span>
+</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Modifier l'option — Chêne</h2>
+<span class="font-code text-code text-outline">ID-SOURCE: OPT-WOOD-OAK-09</span>
+</div>
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-variant transition-colors" title="Fermer le panneau" type="button">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div>
+<!-- Drawer Form Body -->
+<div class="p-space-lg flex flex-col gap-space-lg flex-1">
+<!-- SPECIFIC SECTION: Price Override for this Product -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">price_change</span>
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold">Prix pour ce produit</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-code text-label-sm font-semibold">Surcharge active</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Ce produit surdimensionné nécessite une sélection de bois à fil droit continu. Vous pouvez surcharger le tarif standard de la bibliothèque spécialement pour la <em>Baie accordéon Bois-Alu</em>.
+          </p>
+<!-- Price Mode Selector (Percentage, Fixed, per sqm) -->
+<div class="grid grid-cols-3 gap-2">
+<button class="py-2 px-1 rounded-lg bg-primary-container text-on-primary text-center font-label-sm text-label-sm font-bold shadow-sm flex flex-col items-center gap-0.5" type="button">
+<span>Pourcentage</span>
+<span class="font-code text-[10px] opacity-90">+ 50 %</span>
+</button>
+<button class="py-2 px-1 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-variant text-center font-label-sm text-label-sm font-medium transition-colors flex flex-col items-center gap-0.5" type="button">
+<span>Montant fixe</span>
+<span class="font-code text-[10px] text-outline">Fixe €</span>
+</button>
+<button class="py-2 px-1 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-variant text-center font-label-sm text-label-sm font-medium transition-colors flex flex-col items-center gap-0.5" type="button">
+<span>Prix au m²</span>
+<span class="font-code text-[10px] text-outline">€ / m²</span>
+</button>
+</div>
+<!-- Value Input Field -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Taux de majoration sur la baie (%)</label>
+<div class="relative flex items-center">
+<input class="w-full h-10 px-3 pr-10 rounded-lg bg-surface-container-lowest text-on-surface font-code text-body-lg focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" type="text" value="+ 50"/>
+<span class="absolute right-3 font-code text-label-md text-outline">%</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-code text-code mt-0.5">
+<span>Prix catalogue générique : + 35 %</span>
+<span class="text-tertiary">Impact : + 1 225,00 €</span>
+</div>
+</div>
+</div>
+<!-- Option Image & Visual Identity -->
+<div class="flex flex-col gap-space-sm">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Texture & Visuel client</label>
+<div class="flex items-center gap-space-md">
+<div class="w-24 h-24 rounded-xl overflow-hidden bg-surface-container shrink-0 shadow-sm relative">
+<img class="w-full h-full object-cover" data-alt="Close up photograph of natural oak timber texture with clear annual growth rings, golden honey hues, matte lacquer coat" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSeZ0e0Yw3RY803Dt8SdE5L-nw3JviYuy7OwK8nzh3UyBhCdDnPepK0M1pnO2SzwKsjr68wQGVIRviuoas7lMR0prxDr5i4kxSZzTTo4w0a10OKq6fmgs-IARdZeMhZxIpFE5N-kTituh4S7u1ASoIJ8u3rNchX_LriCEVxVkJQo2u0O4VCnF3_mMaIeVNxAoyRUUdyGWSLJr7iQcxbYgDxjOSWJaIU_8rlnXAgyXrVCat6ag5M74"/>
+</div>
+<div class="flex flex-col gap-2">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-variant transition-colors font-label-md text-label-md shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+<span>Changer l'image</span>
+</button>
+<span class="font-body-sm text-body-sm text-outline">JPG, PNG ou WEBP. Résolution conseillée 1200×1200 px.</span>
+</div>
+</div>
+</div>
+<!-- General Option Information Form Fields -->
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Nom de l'option (affiché aux clients)</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" type="text" value="Chêne de France Massif"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Description technique détaillée</label>
+<textarea class="w-full p-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" rows="3">Chêne noble de premier choix issu de forêts françaises éco-certifiées PEFC. Traitement protecteur multicouche hydrofuge et fongicide à séchage UV.</textarea>
+</div>
+</div>
+<!-- Switches & Configuration Flags -->
+<div class="flex flex-col gap-space-sm p-space-md rounded-xl bg-surface-container-low">
+<!-- Toggle 1: Default Option -->
+<div class="flex items-center justify-between py-1">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Option présélectionnée par défaut</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">L'option sera cochée à l'ouverture du configurateur</span>
+</div>
+<button class="w-11 h-6 rounded-full bg-surface-container-high flex items-center p-1 transition-colors" type="button">
+<span class="w-4 h-4 rounded-full bg-surface-container-lowest shadow-sm"></span>
+</button>
+</div>
+<!-- Toggle 2: Promotion -->
+<div class="flex items-center justify-between py-1 pt-2">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Badge promotionnel & Mise en avant</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Affiche un badge 'Coup de cœur' ou 'Offre spéciale'</span>
+</div>
+<button class="w-11 h-6 rounded-full bg-primary flex items-center justify-end p-1 transition-colors" type="button">
+<span class="w-4 h-4 rounded-full bg-on-primary shadow-sm"></span>
+</button>
+</div>
+</div>
+<!-- Synchronisation State Notification -->
+<div class="p-3 rounded-lg bg-surface-container flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[20px] text-primary shrink-0 mt-0.5">info</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Les modifications apportées au prix et à la description ici ne s'appliqueront qu'à la <strong>Baie accordéon Bois-Alu</strong>. La fiche maître de la bibliothèque générale d'options restera inchangée.
+          </p>
+</div>
+</div>
+<!-- Drawer Bottom Sticky Action Bar -->
+<div class="p-space-lg bg-surface-container-lowest sticky bottom-0 z-20 flex items-center justify-between gap-space-sm shadow-md">
+<button class="px-4 py-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-variant transition-colors font-label-md text-label-md" type="button">
+          Annuler
+        </button>
+<div class="flex items-center gap-2">
+<button class="px-4 py-2 rounded-lg bg-surface-container text-outline hover:text-error transition-colors font-label-md text-label-md" type="button">
+            Rétablir valeurs globales
+          </button>
+<button class="px-5 py-2 rounded-lg bg-primary-container text-on-primary hover:bg-primary transition-all shadow-md font-label-md text-label-md flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Enregistrer</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

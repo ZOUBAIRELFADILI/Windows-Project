@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-fixed":"#dbe1ff","tertiary-container":"#007d55","on-secondary-container":"#5c647a","tertiary":"#006242","surface-container-high":"#dce9ff","background":"#f8f9ff","on-primary-fixed-variant":"#003ea8","primary-fixed-dim":"#b4c5ff","on-primary-container":"#eeefff","primary":"#004ac6","surface-dim":"#cbdbf5","tertiary-fixed":"#6ffbbe","tertiary-fixed-dim":"#4edea3","surface-container-low":"#eff4ff","surface-tint":"#0053db","on-tertiary-container":"#bdffdb","outline":"#737686","primary-container":"#2563eb","on-tertiary":"#ffffff","on-secondary":"#ffffff","on-secondary-fixed-variant":"#3f465c","surface-bright":"#f8f9ff","surface":"#f8f9ff","surface-container-lowest":"#ffffff","secondary-container":"#dae2fd","secondary":"#565e74","on-primary-fixed":"#00174b","on-tertiary-fixed-variant":"#005236","on-surface":"#0b1c30","secondary-fixed-dim":"#bec6e0","on-surface-variant":"#434655","inverse-surface":"#213145","surface-variant":"#d3e4fe","error-container":"#ffdad6","surface-container":"#e5eeff","on-primary":"#ffffff","error":"#ba1a1a","inverse-on-surface":"#eaf1ff","on-background":"#0b1c30","surface-container-highest":"#d3e4fe","on-error-container":"#93000a","on-tertiary-fixed":"#002113","inverse-primary":"#b4c5ff","on-secondary-fixed":"#131b2e","secondary-fixed":"#dae2fd","outline-variant":"#c3c6d7","on-error":"#ffffff"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"margin":"2rem","space-xs":"0.25rem","margin-mobile":"1rem","space-sm":"0.5rem","space-lg":"1.5rem","space-xl":"2rem","gutter-sm":"1rem","space-md":"1rem","gutter":"1.5rem"},fontFamily:{"body-lg":["Inter"],"label-md":["Inter"],"headline-sm":["Inter"],"label-sm":["Inter"],"code":["Inter"],"body-sm":["Inter"],"label-lg":["Inter"],"body-md":["Inter"],"headline-lg":["Inter"],"headline-md":["Inter"],"display-lg":["Inter"]},fontSize:{"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"500"}],"code":["12px",{"lineHeight":"16px","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-lg":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}};</script></head><body class="bg-background text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-inverse-surface z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[20px]">window</span></div><div class="flex flex-col min-w-0"><span class="font-label-lg text-label-lg text-inverse-on-surface truncate tracking-tight">Fenêtres Pro</span><span class="font-label-sm text-label-sm text-outline-variant uppercase tracking-wider">Sur Mesure</span></div></div><div class="px-space-md py-space-sm"><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-lg rounded-lg"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="tableau-de-bord" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Tableau de bord</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="produits" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span>Produits</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="bibliotheque-doptions" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span>Bibliothèque d'options</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="promotions" href="#"><span class="material-symbols-outlined text-[20px]">local_offer</span><span>Promotions</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm transition-colors bg-primary-container text-on-primary font-label-lg rounded-lg" data-path="commandes" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span>Commandes</span></div><span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">12</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="parametres" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Paramètres</span></a></nav></div></div><div class="p-space-md flex flex-col gap-space-xs"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="guides-et-aide" href="#"><span class="material-symbols-outlined text-[20px]">help</span><span>Besoin d'aide ?</span></a><button class="w-full flex items-center justify-center gap-space-sm px-space-md py-space-sm rounded-lg bg-surface-variant text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" type="button"><span class="material-symbols-outlined text-[18px]">play_circle</span><span>Visite guidée</span></button></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 z-40 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-xl flex items-center justify-between gap-space-lg"><div class="flex-1 max-w-md relative"><span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span><input class="w-full h-10 pl-10 pr-space-md rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none" placeholder="Rechercher un produit, une commande..." type="text"/></div><div class="flex items-center gap-space-lg shrink-0"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Brouillon sauvegardé</span></div><a class="flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">open_in_new</span><span>Aperçu boutique</span></a><button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-secondary-container text-on-secondary-fixed-variant hover:bg-surface-container-high transition-colors font-label-md text-label-md" type="button"><span class="material-symbols-outlined text-primary text-[18px]">auto_awesome</span><span>Assistant IA</span></button><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden xl:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface leading-none">AD</span><span class="font-label-sm text-label-sm text-outline leading-tight">Admin Propriétaire</span></div></div></div></div></header><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive Top Action & Breadcrumb Strip -->
+<div class="px-space-xl pt-space-lg pb-space-sm flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-outline mb-1">
+<span>Atelier d'administration</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-semibold">Gestion des affaires</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Commandes</h1>
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">152 affaires</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-colors shadow-sm font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">file_download</span>
+<span>Exporter (.CSV)</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary text-on-primary hover:bg-primary-container transition-colors shadow-md font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Nouvelle commande</span>
+</button>
+</div>
+</div>
+<!-- Status Filters / Tabs Bar -->
+<div class="px-space-xl py-space-sm">
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1">
+<button class="px-space-md py-2 rounded-lg bg-inverse-surface text-inverse-on-surface font-label-md text-label-md flex items-center gap-space-xs shrink-0 shadow-sm" type="button">
+<span>Toutes</span>
+<span class="px-1.5 py-0.2 bg-white/20 rounded-full font-label-sm text-label-sm">152</span>
+</button>
+<button class="px-space-md py-2 rounded-lg bg-surface-container-lowest text-primary hover:bg-surface-container transition-colors font-label-md text-label-md flex items-center gap-space-xs shrink-0 shadow-sm" type="button">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Nouvelle</span>
+<span class="px-1.5 py-0.2 bg-primary-fixed text-on-primary-fixed-variant rounded-full font-label-sm text-label-sm">12</span>
+</button>
+<button class="px-space-md py-2 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container transition-colors font-label-md text-label-md flex items-center gap-space-xs shrink-0 shadow-sm" type="button">
+<span class="w-2 h-2 rounded-full bg-amber-500"></span>
+<span>En production</span>
+<span class="px-1.5 py-0.2 bg-surface-container text-on-surface-variant rounded-full font-label-sm text-label-sm">8</span>
+</button>
+<button class="px-space-md py-2 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container transition-colors font-label-md text-label-md flex items-center gap-space-xs shrink-0 shadow-sm" type="button">
+<span class="w-2 h-2 rounded-full bg-indigo-500"></span>
+<span>En fabrication</span>
+<span class="px-1.5 py-0.2 bg-surface-container text-on-surface-variant rounded-full font-label-sm text-label-sm">6</span>
+</button>
+<button class="px-space-md py-2 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container transition-colors font-label-md text-label-md flex items-center gap-space-xs shrink-0 shadow-sm" type="button">
+<span class="w-2 h-2 rounded-full bg-sky-500"></span>
+<span>Expédiée</span>
+<span class="px-1.5 py-0.2 bg-surface-container text-on-surface-variant rounded-full font-label-sm text-label-sm">4</span>
+</button>
+<button class="px-space-md py-2 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container transition-colors font-label-md text-label-md flex items-center gap-space-xs shrink-0 shadow-sm" type="button">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+<span>Livrée</span>
+<span class="px-1.5 py-0.2 bg-surface-container text-on-surface-variant rounded-full font-label-sm text-label-sm">122</span>
+</button>
+</div>
+</div>
+<!-- Master/Detail Split Layout Container -->
+<div class="px-space-xl py-space-md pb-space-xl flex flex-col xl:flex-row gap-space-lg items-start relative">
+<!-- LEFT PANE: Orders List & Metrics Overview -->
+<div class="w-full xl:w-7/12 flex flex-col gap-space-md">
+<!-- Fast Analytics Mini-Bento Strip -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Volume ce mois</span>
+<span class="font-headline-md text-headline-md text-on-surface mt-0.5">184 920 €</span>
+<div class="flex items-center gap-1 mt-1 text-tertiary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+<span>+14.2% vs M-1</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Délai moyen usine</span>
+<span class="font-headline-md text-headline-md text-on-surface mt-0.5">18,4 j</span>
+<div class="flex items-center gap-1 mt-1 text-tertiary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span>-2.1 j optimisation</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">precision_manufacturing</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Affaires à valider</span>
+<span class="font-headline-md text-headline-md text-primary mt-0.5">12 dossiers</span>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span>Traitement prioritaire</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">hourglass_top</span>
+</div>
+</div>
+</div>
+<!-- Main Table Container -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Table Search & Filters bar -->
+<div class="p-space-md flex flex-col sm:flex-row gap-space-sm items-center justify-between bg-surface-container-low/40">
+<div class="relative w-full sm:w-80">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">filter_list</span>
+<input class="w-full h-9 pl-9 pr-3 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary/20 shadow-sm" placeholder="Filtrer par réf, client, modèle..." type="text"/>
+</div>
+<div class="flex items-center gap-space-xs self-end sm:self-auto">
+<span class="font-label-sm text-label-sm text-outline">Trier par:</span>
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm flex items-center gap-1 shadow-sm" type="button">
+<span>Date décroissante</span>
+<span class="material-symbols-outlined text-[16px]">arrow_drop_down</span>
+</button>
+</div>
+</div>
+<!-- Orders Table List -->
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-surface-container-low text-outline uppercase font-label-sm text-label-sm">
+<tr>
+<th class="py-3 px-space-md">Référence</th>
+<th class="py-3 px-space-md">Date</th>
+<th class="py-3 px-space-md">Client</th>
+<th class="py-3 px-space-md">Modèle Menuiserie</th>
+<th class="py-3 px-space-md text-right">Montant TTC</th>
+<th class="py-3 px-space-md">Statut</th>
+<th class="py-3 px-space-sm text-center">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface font-body-md text-body-md">
+<!-- Order 1 : ACTIVE / SELECTED -->
+<tr class="bg-surface-container-high/60 cursor-pointer transition-colors relative">
+<td class="py-3.5 px-space-md font-code text-code text-primary font-semibold">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-6 rounded-full bg-primary"></span>
+<span>CMD-2026-0152</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-outline font-body-sm text-body-sm">15/10/2026</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Sophie Martin</span>
+<span class="font-label-sm text-label-sm text-outline">Paris (75011)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded bg-primary-fixed flex items-center justify-center text-primary text-[14px]">
+<span class="material-symbols-outlined text-[16px]">window</span>
+</span>
+<span class="font-label-md text-label-md">Baie accordéon Bois-Alu</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-right font-headline-sm text-headline-sm text-on-surface">
+                  8 371,20 €
+                </td>
+<td class="py-3.5 px-space-md">
+<span class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold inline-flex items-center gap-1 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Nouvelle</span>
+</span>
+</td>
+<td class="py-3.5 px-space-sm text-center">
+<button class="w-8 h-8 rounded-full hover:bg-surface-container flex items-center justify-center text-outline hover:text-on-surface transition-colors" title="Afficher les détails" type="button">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</td>
+</tr>
+<!-- Order 2 -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="py-3.5 px-space-md font-code text-code text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-6 rounded-full bg-transparent"></span>
+<span>CMD-2026-0151</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-outline font-body-sm text-body-sm">15/10/2026</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Ahmed Benali</span>
+<span class="font-label-sm text-label-sm text-outline">Lyon (69003)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded bg-surface-container flex items-center justify-center text-secondary text-[14px]">
+<span class="material-symbols-outlined text-[16px]">view_column</span>
+</span>
+<span class="font-label-md text-label-md">Coulissante 2 vantaux</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-right font-headline-sm text-headline-sm text-on-surface">
+                  5 420,00 €
+                </td>
+<td class="py-3.5 px-space-md">
+<span class="px-2.5 py-1 rounded-full bg-amber-50 text-amber-700 font-label-sm text-label-sm font-semibold inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+<span>En production</span>
+</span>
+</td>
+<td class="py-3.5 px-space-sm text-center">
+<button class="w-8 h-8 rounded-full hover:bg-surface-container flex items-center justify-center text-outline hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</td>
+</tr>
+<!-- Order 3 -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="py-3.5 px-space-md font-code text-code text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-6 rounded-full bg-transparent"></span>
+<span>CMD-2026-0150</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-outline font-body-sm text-body-sm">14/10/2026</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Julie Bernard</span>
+<span class="font-label-sm text-label-sm text-outline">Bordeaux (33000)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded bg-surface-container flex items-center justify-center text-secondary text-[14px]">
+<span class="material-symbols-outlined text-[16px]">door_sliding</span>
+</span>
+<span class="font-label-md text-label-md">Smart-Slide Premium</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-right font-headline-sm text-headline-sm text-on-surface">
+                  3 980,50 €
+                </td>
+<td class="py-3.5 px-space-md">
+<span class="px-2.5 py-1 rounded-full bg-indigo-50 text-indigo-700 font-label-sm text-label-sm font-semibold inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
+<span>En fabrication</span>
+</span>
+</td>
+<td class="py-3.5 px-space-sm text-center">
+<button class="w-8 h-8 rounded-full hover:bg-surface-container flex items-center justify-center text-outline hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</td>
+</tr>
+<!-- Order 4 -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="py-3.5 px-space-md font-code text-code text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-6 rounded-full bg-transparent"></span>
+<span>CMD-2026-0149</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-outline font-body-sm text-body-sm">13/10/2026</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Laurent Dupont</span>
+<span class="font-label-sm text-label-sm text-outline">Nantes (44000)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded bg-surface-container flex items-center justify-center text-secondary text-[14px]">
+<span class="material-symbols-outlined text-[16px]">window</span>
+</span>
+<span class="font-label-md text-label-md">Porte-fenêtre 3V Chêne</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-right font-headline-sm text-headline-sm text-on-surface">
+                  6 230,00 €
+                </td>
+<td class="py-3.5 px-space-md">
+<span class="px-2.5 py-1 rounded-full bg-sky-50 text-sky-700 font-label-sm text-label-sm font-semibold inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
+<span>Expédiée</span>
+</span>
+</td>
+<td class="py-3.5 px-space-sm text-center">
+<button class="w-8 h-8 rounded-full hover:bg-surface-container flex items-center justify-center text-outline hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</td>
+</tr>
+<!-- Order 5 -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="py-3.5 px-space-md font-code text-code text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-6 rounded-full bg-transparent"></span>
+<span>CMD-2026-0148</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-outline font-body-sm text-body-sm">11/10/2026</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Claire Moreau</span>
+<span class="font-label-sm text-label-sm text-outline">Strasbourg (67000)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded bg-surface-container flex items-center justify-center text-secondary text-[14px]">
+<span class="material-symbols-outlined text-[16px]">grid_view</span>
+</span>
+<span class="font-label-md text-label-md">Châssis fixe panoramique</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-right font-headline-sm text-headline-sm text-on-surface">
+                  2 780,00 €
+                </td>
+<td class="py-3.5 px-space-md">
+<span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 font-label-sm text-label-sm font-semibold inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+<span>Livrée</span>
+</span>
+</td>
+<td class="py-3.5 px-space-sm text-center">
+<button class="w-8 h-8 rounded-full hover:bg-surface-container flex items-center justify-center text-outline hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination Bar -->
+<div class="px-space-md py-3 bg-surface-container-low/50 flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="font-body-sm text-body-sm text-outline">
+            Affichage de <span class="font-semibold text-on-surface">1 à 5</span> sur <span class="font-semibold text-on-surface">152</span> résultats
+          </div>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-outline hover:text-on-surface flex items-center justify-center transition-colors shadow-sm disabled:opacity-50" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center shadow-sm" type="button">1</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-sm text-label-sm flex items-center justify-center shadow-sm" type="button">2</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-sm text-label-sm flex items-center justify-center shadow-sm" type="button">3</button>
+<span class="px-1 text-outline font-label-sm text-label-sm">...</span>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-sm text-label-sm flex items-center justify-center shadow-sm" type="button">31</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-outline hover:text-on-surface flex items-center justify-center transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Workshop Production Queue Insight -->
+<div class="p-space-md bg-gradient-to-r from-surface-container-high/60 via-surface-container to-surface-container-lowest rounded-xl flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary shadow-sm shrink-0">
+<span class="material-symbols-outlined text-[20px]">precision_manufacturing</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Ligne CNC n°3 disponible</span>
+<span class="font-body-sm text-body-sm text-outline">Prête pour le lancement de l'affaire sélectionnée CMD-2026-0152</span>
+</div>
+</div>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold transition-colors shadow-sm" type="button">
+          Planifier en atelier
+        </button>
+</div>
+</div>
+<!-- RIGHT PANE: Selected Order Detail Card & Technical Drawing -->
+<div class="w-full xl:w-5/12 flex flex-col gap-space-md sticky top-20">
+<!-- Detail Card Canvas -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg flex flex-col gap-space-md relative overflow-hidden">
+<!-- Header: Ref & State Badge -->
+<div class="flex items-start justify-between pb-space-sm bg-surface-container-low/30 -mx-space-lg -mt-space-lg p-space-lg">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-code text-headline-sm text-primary font-bold">CMD-2026-0152</span>
+<button class="text-outline hover:text-primary transition-colors" title="Copier la référence" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+<span class="font-label-sm text-label-sm text-outline mt-0.5">Saisie web le 15/10/2026 à 14:32</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-3 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold shadow-sm flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+<span>Nouvelle affaire</span>
+</span>
+</div>
+</div>
+<!-- Client Info Zone -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">person</span>
+<span class="font-semibold">Sophie Martin</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-primary font-code text-code">Client particulier</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs pt-1 font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-outline text-[16px]">mail</span>
+<span class="truncate">sophie.martin@gmail.com</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-outline text-[16px]">phone</span>
+<span>+33 6 42 19 88 02</span>
+</div>
+<div class="sm:col-span-2 flex items-start gap-1.5 mt-0.5">
+<span class="material-symbols-outlined text-outline text-[16px] shrink-0 mt-0.5">local_shipping</span>
+<span>Livraison chantier : 48 Rue Oberkampf, 75011 Paris (Accès RDC fond de cour)</span>
+</div>
+</div>
+</div>
+<!-- Technical Drawing & Dimension Diagram (Cotation précise) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-inner flex flex-col gap-space-xs bg-slate-900 text-slate-100">
+<div class="flex items-center justify-between pb-1 text-slate-300">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sky-400 text-[18px]">architecture</span>
+<span class="font-label-md text-label-md text-white font-semibold">Schéma technique coté de fabrication</span>
+</div>
+<span class="font-code text-code text-sky-400 bg-sky-950/80 px-2 py-0.5 rounded">Échelle 1:20</span>
+</div>
+<!-- SVG Architectural Scheme -->
+<div class="w-full flex flex-col items-center justify-center py-2 relative">
+<svg class="w-full max-w-[340px] h-44 overflow-visible" fill="none" viewbox="0 0 340 180" xmlns="http://www.w3.org/2000/svg">
+<!-- Top Cotation Line (Largeur 2500 mm) -->
+<line stroke="#38bdf8" stroke-dasharray="3 3" stroke-width="1.5" x1="45" x2="295" y1="20" y2="20"></line>
+<line stroke="#38bdf8" stroke-width="1.5" x1="45" x2="45" y1="14" y2="26"></line>
+<line stroke="#38bdf8" stroke-width="1.5" x1="295" x2="295" y1="14" y2="26"></line>
+<rect fill="#0f172a" height="18" rx="4" width="70" x="135" y="10"></rect>
+<text fill="#38bdf8" font-family="Inter" font-size="11" font-weight="600" text-anchor="middle" x="170" y="23">2 500 mm</text>
+<!-- Left Cotation Line (Hauteur 2200 mm) -->
+<line stroke="#38bdf8" stroke-dasharray="3 3" stroke-width="1.5" x1="25" x2="25" y1="35" y2="165"></line>
+<line stroke="#38bdf8" stroke-width="1.5" x1="19" x2="31" y1="35" y2="35"></line>
+<line stroke="#38bdf8" stroke-width="1.5" x1="19" x2="31" y1="165" y2="165"></line>
+<rect fill="#0f172a" height="18" rx="4" width="50" x="0" y="90"></rect>
+<text fill="#38bdf8" font-family="Inter" font-size="10" font-weight="600" text-anchor="middle" x="25" y="103">2 200</text>
+<!-- Outer Frame (Dormant Bois-Alu) -->
+<rect fill="#1e293b" height="130" rx="2" stroke="#64748b" stroke-width="3" width="250" x="45" y="35"></rect>
+<!-- Glass Vantaux (3 Vantaux en accordéon) -->
+<!-- Vantail 1 -->
+<rect fill="#0284c7" fill-opacity="0.18" height="116" rx="1" stroke="#38bdf8" stroke-width="1.5" width="76" x="52" y="42"></rect>
+<!-- Vantail 2 -->
+<rect fill="#0284c7" fill-opacity="0.18" height="116" rx="1" stroke="#38bdf8" stroke-width="1.5" width="76" x="132" y="42"></rect>
+<!-- Vantail 3 -->
+<rect fill="#0284c7" fill-opacity="0.18" height="116" rx="1" stroke="#38bdf8" stroke-width="1.5" width="76" x="212" y="42"></rect>
+<!-- Folding opening arrow kinematics (Accordéon vers la gauche) -->
+<path d="M70 100 L95 100 M90 95 L95 100 L90 105" stroke="#f59e0b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M150 100 L175 100 M170 95 L175 100 L170 105" stroke="#f59e0b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M230 100 L255 100 M250 95 L255 100 L250 105" stroke="#f59e0b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<!-- Hinges indicators -->
+<circle cx="128" cy="60" fill="#cbd5e1" r="3"></circle>
+<circle cx="128" cy="140" fill="#cbd5e1" r="3"></circle>
+<circle cx="208" cy="60" fill="#cbd5e1" r="3"></circle>
+<circle cx="208" cy="140" fill="#cbd5e1" r="3"></circle>
+<!-- Center labels -->
+<text fill="#94a3b8" font-family="Inter" font-size="9" text-anchor="middle" x="90" y="148">Vantail 1</text>
+<text fill="#94a3b8" font-family="Inter" font-size="9" text-anchor="middle" x="170" y="148">Vantail 2</text>
+<text fill="#94a3b8" font-family="Inter" font-size="9" text-anchor="middle" x="250" y="148">Vantail 3</text>
+</svg>
+</div>
+<!-- Technical Specs Highlights -->
+<div class="grid grid-cols-3 gap-2 pt-1 border-t-0 bg-slate-950/60 p-2 rounded-lg font-label-sm text-label-sm">
+<div class="flex flex-col">
+<span class="text-slate-400">Dimensions</span>
+<span class="text-white font-medium">2500 × 2200 mm</span>
+</div>
+<div class="flex flex-col">
+<span class="text-slate-400">Surface vitrée</span>
+<span class="text-white font-medium">5,50 m²</span>
+</div>
+<div class="flex flex-col">
+<span class="text-slate-400">Cinématique</span>
+<span class="text-amber-400 font-medium">Refoulement G</span>
+</div>
+</div>
+</div>
+<!-- Strict Itemized Pricing Table -->
+<div class="flex flex-col">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Détail chiffré de la menuiserie</span>
+<span class="font-label-sm text-label-sm text-outline">Tarif Usine H.T & T.T.C</span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-2 font-body-sm text-body-sm">
+<div class="flex items-center justify-between text-on-surface">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span>Prix de base (2500 × 2200 mm)</span>
+</div>
+<span class="font-code text-code text-on-surface font-medium">6 120,00 €</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Profilé 78 mm (+25%)</span>
+</div>
+<span class="font-code text-code text-on-surface">+ 1 530,00 €</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Essence Sapin traité (+10%)</span>
+</div>
+<span class="font-code text-code text-on-surface">+ 612,00 €</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Couleur alu : Métallique Alpha (+20%)</span>
+</div>
+<span class="font-code text-code text-on-surface">+ 1 224,00 €</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Vitrage Ug 0,7 (43,08 €/m² × 5,5 m²)</span>
+</div>
+<span class="font-code text-code text-on-surface">+ 236,95 €</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>Poignée ergonomique standard</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary uppercase font-semibold">Inclus</span>
+</div>
+<!-- Subtotal divider bar -->
+<div class="pt-2 mt-1 flex items-center justify-between font-label-md text-label-md text-on-surface bg-surface-container-high/40 p-2 rounded-lg">
+<span>Sous-total configuré</span>
+<span class="font-code text-code font-bold">9 848,47 €</span>
+</div>
+<!-- Promotion Highlight -->
+<div class="flex items-center justify-between text-error font-medium px-2">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">local_offer</span>
+<span>Remise commerciale d'automne (-15 %)</span>
+</div>
+<span class="font-code text-code font-semibold">- 1 477,27 €</span>
+</div>
+<!-- Final Grand Total -->
+<div class="p-space-md mt-1 rounded-xl bg-inverse-surface text-inverse-on-surface flex items-center justify-between shadow-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-slate-300">Total Net TTC</span>
+<span class="font-label-sm text-label-sm text-slate-400">Dont TVA 20% (1 395,20 €)</span>
+</div>
+<span class="font-display-lg text-display-lg text-white font-bold tracking-tight">8 371,20 €</span>
+</div>
+</div>
+</div>
+<!-- Action Buttons Cluster -->
+<div class="flex flex-col gap-space-xs pt-1">
+<button class="w-full flex items-center justify-center gap-space-sm px-space-md py-2.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container transition-colors shadow-md font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+<span>Télécharger la fiche de fabrication (PDF)</span>
+</button>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs">
+<button class="flex items-center justify-center gap-1.5 px-space-sm py-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-secondary text-[18px]">sync_alt</span>
+<span>Changer le statut</span>
+</button>
+<button class="flex items-center justify-center gap-1.5 px-space-sm py-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-secondary text-[18px]">send</span>
+<span>Envoyer au client</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- ONBOARDING ACTIVE GUIDED POPOVER / TOOLTIP (Targeted to the Order Table / Detail action) -->
+<div class="absolute left-6 xl:left-[38%] top-56 z-30 max-w-sm bg-inverse-surface text-inverse-on-surface p-space-md rounded-xl shadow-2xl animate-bounce-subtle" id="onboarding-tooltip">
+<!-- Pointer Triangle -->
+<div class="absolute -left-2 top-8 w-4 h-4 bg-inverse-surface rotate-45"></div>
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-primary-container flex items-center justify-center text-on-primary text-[12px] font-bold">
+            ?
+          </div>
+<span class="font-label-md text-label-md text-white font-semibold">Guidage pas à pas (1/3)</span>
+</div>
+<button class="text-slate-400 hover:text-white transition-colors" onclick="document.getElementById('onboarding-tooltip').style.display='none'" title="Fermer l'aide">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-slate-200 mt-2 leading-relaxed">
+        Cliquez sur une ligne pour charger immédiatement la <strong>cotation technique</strong> et le <strong>chiffrage unitaire</strong> dans le panneau de droite.
+      </p>
+<div class="flex items-center justify-between mt-3 pt-2 bg-slate-900/60 -mx-space-md -mb-space-md p-space-sm rounded-b-xl">
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+</div>
+<div class="flex items-center gap-2">
+<button class="text-slate-300 hover:text-white font-label-sm text-label-sm" onclick="document.getElementById('onboarding-tooltip').style.display='none'">Ignorer</button>
+<button class="px-2.5 py-1 rounded bg-primary text-on-primary font-label-sm text-label-sm font-semibold hover:bg-primary-container transition-colors shadow-sm" onclick="document.getElementById('onboarding-tooltip').style.display='none'">Suivant</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+    // Micro-interaction for clicking order rows
+    document.querySelectorAll('tbody tr').forEach(row => {
+      row.addEventListener('click', function() {
+        document.querySelectorAll('tbody tr').forEach(r => {
+          r.classList.remove('bg-surface-container-high/60');
+          const bar = r.querySelector('.w-1.5.h-6');
+          if (bar) bar.className = 'w-1.5 h-6 rounded-full bg-transparent';
+        });
+        this.classList.add('bg-surface-container-high/60');
+        const activeBar = this.querySelector('.w-1.5.h-6');
+        if (activeBar) activeBar.className = 'w-1.5 h-6 rounded-full bg-primary';
+      });
+    });
+  </script>
+</div></main></div></body></html>

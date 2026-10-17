@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-fixed":"#dbe1ff","tertiary-container":"#007d55","on-secondary-container":"#5c647a","tertiary":"#006242","surface-container-high":"#dce9ff","background":"#f8f9ff","on-primary-fixed-variant":"#003ea8","primary-fixed-dim":"#b4c5ff","on-primary-container":"#eeefff","primary":"#004ac6","surface-dim":"#cbdbf5","tertiary-fixed":"#6ffbbe","tertiary-fixed-dim":"#4edea3","surface-container-low":"#eff4ff","surface-tint":"#0053db","on-tertiary-container":"#bdffdb","outline":"#737686","primary-container":"#2563eb","on-tertiary":"#ffffff","on-secondary":"#ffffff","on-secondary-fixed-variant":"#3f465c","surface-bright":"#f8f9ff","surface":"#f8f9ff","surface-container-lowest":"#ffffff","secondary-container":"#dae2fd","secondary":"#565e74","on-primary-fixed":"#00174b","on-tertiary-fixed-variant":"#005236","on-surface":"#0b1c30","secondary-fixed-dim":"#bec6e0","on-surface-variant":"#434655","inverse-surface":"#213145","surface-variant":"#d3e4fe","error-container":"#ffdad6","surface-container":"#e5eeff","on-primary":"#ffffff","error":"#ba1a1a","inverse-on-surface":"#eaf1ff","on-background":"#0b1c30","surface-container-highest":"#d3e4fe","on-error-container":"#93000a","on-tertiary-fixed":"#002113","inverse-primary":"#b4c5ff","on-secondary-fixed":"#131b2e","secondary-fixed":"#dae2fd","outline-variant":"#c3c6d7","on-error":"#ffffff"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"margin":"2rem","space-xs":"0.25rem","margin-mobile":"1rem","space-sm":"0.5rem","space-lg":"1.5rem","space-xl":"2rem","gutter-sm":"1rem","space-md":"1rem","gutter":"1.5rem"},fontFamily:{"body-lg":["Inter"],"label-md":["Inter"],"headline-sm":["Inter"],"label-sm":["Inter"],"code":["Inter"],"body-sm":["Inter"],"label-lg":["Inter"],"body-md":["Inter"],"headline-lg":["Inter"],"headline-md":["Inter"],"display-lg":["Inter"]},fontSize:{"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"500"}],"code":["12px",{"lineHeight":"16px","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-lg":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}};</script></head><body class="bg-background text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-inverse-surface z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[20px]">window</span></div><div class="flex flex-col min-w-0"><span class="font-label-lg text-label-lg text-inverse-on-surface truncate tracking-tight">Fenêtres Pro</span><span class="font-label-sm text-label-sm text-outline-variant uppercase tracking-wider">Sur Mesure</span></div></div><div class="px-space-md py-space-sm"><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-lg rounded-lg"><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm transition-colors bg-primary-container text-on-primary font-label-lg rounded-lg" data-path="tableau-de-bord" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Tableau de bord</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="produits" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span>Produits</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="bibliotheque-doptions" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span>Bibliothèque d'options</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="promotions" href="#"><span class="material-symbols-outlined text-[20px]">local_offer</span><span>Promotions</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="commandes" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span>Commandes</span></div><span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">12</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="parametres" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Paramètres</span></a></nav></div></div><div class="p-space-md flex flex-col gap-space-xs"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="guides-et-aide" href="#"><span class="material-symbols-outlined text-[20px]">help</span><span>Besoin d'aide ?</span></a><button class="w-full flex items-center justify-center gap-space-sm px-space-md py-space-sm rounded-lg bg-surface-variant text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" type="button"><span class="material-symbols-outlined text-[18px]">play_circle</span><span>Visite guidée</span></button></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 z-40 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-xl flex items-center justify-between gap-space-lg"><div class="flex-1 max-w-md relative"><span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span><input class="w-full h-10 pl-10 pr-space-md rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none" placeholder="Rechercher un produit, une commande..." type="text"/></div><div class="flex items-center gap-space-lg shrink-0"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Brouillon sauvegardé</span></div><a class="flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">open_in_new</span><span>Aperçu boutique</span></a><button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-secondary-container text-on-secondary-fixed-variant hover:bg-surface-container-high transition-colors font-label-md text-label-md" type="button"><span class="material-symbols-outlined text-primary text-[18px]">auto_awesome</span><span>Assistant IA</span></button><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden xl:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface leading-none">AD</span><span class="font-label-sm text-label-sm text-outline leading-tight">Admin Propriétaire</span></div></div></div></div></header><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Subtle Ambient Top Gradient -->
+<div class="relative w-full px-space-xl py-space-lg flex flex-col gap-space-xl overflow-hidden">
+<div class="absolute top-0 right-1/4 w-96 h-96 bg-primary-fixed/30 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-1/3 left-10 w-72 h-72 bg-secondary-container/40 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<!-- 1. Top Section: Page Greeting & Instant Action -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs text-secondary font-label-md text-label-md">
+<span>Administration Fabricant</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-semibold">Tableau de bord</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-1">
+          Bonjour, Atelier Menuiserie Pro 👋
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Voici la synthèse opérationnelle et l’activité en direct de vos configurateurs de menuiseries.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-all shadow-sm font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span>Exporter le rapport</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-lg py-2.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container transition-all shadow-md font-label-lg text-label-lg group" id="btn-create-product" type="button">
+<span class="material-symbols-outlined text-[20px] transition-transform group-hover:rotate-90">add</span>
+<span>Créer un produit</span>
+</button>
+</div>
+</div>
+<!-- 2. Onboarding / Checklist: "Mon premier produit" -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm relative overflow-hidden">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg">
+<div class="flex items-start gap-space-md max-w-xl">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[26px]">rocket_launch</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Guide de mise en ligne : Mon premier produit</h2>
+<span class="px-space-xs py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">Étape 3 sur 5</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Activez votre configurateur interactif sur votre boutique en ligne en validant toutes les spécifications techniques.
+            </p>
+<div class="w-full max-w-md bg-surface-container h-2 rounded-full overflow-hidden mt-3">
+<div class="bg-primary h-full rounded-full transition-all duration-500" id="checklist-progress-bar" style="width: 60%"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-secondary-container text-on-secondary-fixed-variant hover:bg-surface-container-high transition-colors font-label-md text-label-md" id="btn-launch-tour-header" type="button">
+<span class="material-symbols-outlined text-primary text-[18px]">explore</span>
+<span>Lancer le tour guidé (4 étapes)</span>
+</button>
+</div>
+</div>
+<!-- Checklist Interactive Items Grid -->
+<div class="grid grid-cols-1 md:grid-cols-5 gap-space-sm mt-space-lg pt-space-md bg-surface-container-low p-space-md rounded-xl">
+<!-- Item 1 -->
+<label class="flex items-center gap-space-xs p-space-xs rounded-lg hover:bg-surface-container-lowest transition-colors cursor-pointer select-none">
+<input checked="" class="step-checkbox w-4 h-4 rounded text-primary focus:ring-primary-container" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface font-medium line-through opacity-70">Infos de base</span>
+</label>
+<!-- Item 2 -->
+<label class="flex items-center gap-space-xs p-space-xs rounded-lg hover:bg-surface-container-lowest transition-colors cursor-pointer select-none">
+<input checked="" class="step-checkbox w-4 h-4 rounded text-primary focus:ring-primary-container" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface font-medium line-through opacity-70">Grille tarifaire</span>
+</label>
+<!-- Item 3 -->
+<label class="flex items-center gap-space-xs p-space-xs rounded-lg hover:bg-surface-container-lowest transition-colors cursor-pointer select-none">
+<input checked="" class="step-checkbox w-4 h-4 rounded text-primary focus:ring-primary-container" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface font-medium line-through opacity-70">Options & finitions</span>
+</label>
+<!-- Item 4 (Unchecked) -->
+<label class="flex items-center gap-space-xs p-space-xs rounded-lg hover:bg-surface-container-lowest transition-colors cursor-pointer select-none">
+<input class="step-checkbox w-4 h-4 rounded text-primary focus:ring-primary-container" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Incompatibilités</span>
+</label>
+<!-- Item 5 (Unchecked) -->
+<label class="flex items-center gap-space-xs p-space-xs rounded-lg hover:bg-surface-container-lowest transition-colors cursor-pointer select-none">
+<input class="step-checkbox w-4 h-4 rounded text-primary focus:ring-primary-container" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Test client en direct</span>
+</label>
+</div>
+</div>
+<!-- 3. KPI Cards Section -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- KPI 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary">Commandes aujourd'hui</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+</div>
+</div>
+<div class="mt-4 flex items-baseline gap-space-sm">
+<span class="font-display-lg text-display-lg text-on-surface font-bold tracking-tight">8</span>
+<span class="inline-flex items-center text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+            +33%
+          </span>
+</div>
+<span class="font-body-sm text-body-sm text-outline mt-1">vs 6 commandes hier</span>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary">CA du mois (Facturé)</span>
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed-dim/30 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">euro_symbol</span>
+</div>
+</div>
+<div class="mt-4 flex items-baseline gap-space-sm">
+<span class="font-display-lg text-display-lg text-on-surface font-bold tracking-tight">48 371 €</span>
+<span class="inline-flex items-center text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+            +12%
+          </span>
+</div>
+<span class="font-body-sm text-body-sm text-outline mt-1">Objectif mensuel à 82%</span>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary">Panier moyen devis</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</div>
+</div>
+<div class="mt-4 flex items-baseline gap-space-sm">
+<span class="font-display-lg text-display-lg text-on-surface font-bold tracking-tight">4 837 €</span>
+<span class="inline-flex items-center text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+            +8%
+          </span>
+</div>
+<span class="font-body-sm text-body-sm text-outline mt-1">+350 € avec double vitrage ITR</span>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary">Configs abandonnées</span>
+<div class="w-8 h-8 rounded-lg bg-error-container/40 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[18px]">remove_shopping_cart</span>
+</div>
+</div>
+<div class="mt-4 flex items-baseline gap-space-sm">
+<span class="font-display-lg text-display-lg text-on-surface font-bold tracking-tight">27</span>
+<span class="inline-flex items-center text-error font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+            +29%
+          </span>
+</div>
+<span class="font-body-sm text-body-sm text-outline mt-1">Étape dimensionnelle critique</span>
+</div>
+</div>
+<!-- 4. Interactive Activity Graph & Most Configured Products (Split Section) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Activity Bar Chart (7 Cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-md">
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Activité des commandes</h3>
+<span class="font-body-sm text-body-sm text-secondary">Volume quotidien sur les 30 derniers jours</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container p-1 rounded-lg">
+<button class="px-space-sm py-1 rounded font-label-sm text-label-sm bg-surface-container-lowest text-primary font-bold shadow-sm" type="button">30 jours</button>
+<button class="px-space-sm py-1 rounded font-label-sm text-label-sm text-secondary hover:text-on-surface" type="button">7 jours</button>
+<button class="px-space-sm py-1 rounded font-label-sm text-label-sm text-secondary hover:text-on-surface" type="button">Année</button>
+</div>
+</div>
+<!-- Inline SVG Interactive Bar Chart -->
+<div class="w-full pt-4">
+<div class="h-56 w-full flex items-end gap-1.5 sm:gap-2 px-1">
+<!-- 30 bars simulating daily custom window orders -->
+<div class="flex-1 flex flex-col items-center gap-1 group relative cursor-pointer">
+<div class="w-full bg-surface-container-high rounded-t group-hover:bg-primary transition-all duration-300" style="height: 35%;"></div>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group relative cursor-pointer">
+<div class="w-full bg-surface-container-high rounded-t group-hover:bg-primary transition-all duration-300" style="height: 48%;"></div>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group relative cursor-pointer">
+<div class="w-full bg-surface-container-high rounded-t group-hover:bg-primary transition-all duration-300" style="height: 25%;"></div>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group relative cursor-pointer">
+<div class="w-full bg-surface-container-high rounded-t group-hover:bg-primary transition-all duration-300" style="height: 60%;"></div>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group relative cursor-pointer">
+<div class="w-full bg-surface-container-high rounded-t group-hover:bg-primary transition-all duration-300" style="height: 72%;"></div>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group relative cursor-pointer">
+<div class="w-full bg-surface-container-high rounded-t group-hover:bg-primary transition-all duration-300" style="height: 30%;"></div>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group relative cursor-pointer">
+<div class="w-full bg-surface-container-high rounded-t group-hover:bg-primary transition-all duration-300" style="height: 15%;"></div>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group relative cursor-pointer">
+<div class="w-full bg-surface-container-high rounded-t group-hover:bg-primary transition-all duration-300" style="height: 52%;"></div>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group relative cursor-pointer">
+<div class="w-full bg-surface-container-high rounded-t group-hover:bg-primary transition-all duration-300" style="height: 64%;"></div>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group relative cursor-pointer">
+<div class="w-full bg-surface-container-high rounded-t group-hover:bg-primary transition-all duration-300" style="height: 80%;"></div>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group relative cursor-pointer">
+<div class="w-full bg-surface-container-high rounded-t group-hover:bg-primary transition-all duration-300" style="height: 42%;"></div>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group relative cursor-pointer">
+<div class="w-full bg-surface-container-high rounded-t group-hover:bg-primary transition-all duration-300" style="height: 38%;"></div>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group relative cursor-pointer">
+<div class="w-full bg-surface-container-high rounded-t group-hover:bg-primary transition-all duration-300" style="height: 58%;"></div>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group relative cursor-pointer">
+<div class="w-full bg-surface-container-high rounded-t group-hover:bg-primary transition-all duration-300" style="height: 70%;"></div>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group relative cursor-pointer">
+<div class="w-full bg-surface-container-high rounded-t group-hover:bg-primary transition-all duration-300" style="height: 45%;"></div>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group relative cursor-pointer">
+<div class="w-full bg-surface-container-high rounded-t group-hover:bg-primary transition-all duration-300" style="height: 20%;"></div>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group relative cursor-pointer">
+<div class="w-full bg-surface-container-high rounded-t group-hover:bg-primary transition-all duration-300" style="height: 62%;"></div>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group relative cursor-pointer">
+<div class="w-full bg-surface-container-high rounded-t group-hover:bg-primary transition-all duration-300" style="height: 75%;"></div>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group relative cursor-pointer">
+<div class="w-full bg-surface-container-high rounded-t group-hover:bg-primary transition-all duration-300" style="height: 50%;"></div>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group relative cursor-pointer">
+<div class="w-full bg-surface-container-high rounded-t group-hover:bg-primary transition-all duration-300" style="height: 68%;"></div>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group relative cursor-pointer">
+<div class="w-full bg-surface-container-high rounded-t group-hover:bg-primary transition-all duration-300" style="height: 85%;"></div>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group relative cursor-pointer">
+<div class="w-full bg-surface-container-high rounded-t group-hover:bg-primary transition-all duration-300" style="height: 32%;"></div>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group relative cursor-pointer">
+<div class="w-full bg-surface-container-high rounded-t group-hover:bg-primary transition-all duration-300" style="height: 40%;"></div>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group relative cursor-pointer">
+<div class="w-full bg-surface-container-high rounded-t group-hover:bg-primary transition-all duration-300" style="height: 55%;"></div>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group relative cursor-pointer">
+<div class="w-full bg-surface-container-high rounded-t group-hover:bg-primary transition-all duration-300" style="height: 63%;"></div>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group relative cursor-pointer">
+<div class="w-full bg-surface-container-high rounded-t group-hover:bg-primary transition-all duration-300" style="height: 78%;"></div>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group relative cursor-pointer">
+<div class="w-full bg-surface-container-high rounded-t group-hover:bg-primary transition-all duration-300" style="height: 88%;"></div>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group relative cursor-pointer">
+<div class="w-full bg-surface-container-high rounded-t group-hover:bg-primary transition-all duration-300" style="height: 65%;"></div>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group relative cursor-pointer">
+<div class="w-full bg-surface-container-high rounded-t group-hover:bg-primary transition-all duration-300" style="height: 92%;"></div>
+</div>
+<!-- Highlighted Today's Bar -->
+<div class="flex-1 flex flex-col items-center gap-1 group relative cursor-pointer">
+<div class="absolute -top-7 px-2 py-0.5 rounded bg-inverse-surface text-inverse-on-surface font-label-sm text-label-sm shadow pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">8 cmds</div>
+<div class="w-full bg-primary rounded-t shadow-sm" style="height: 96%;"></div>
+</div>
+</div>
+<div class="flex justify-between items-center text-outline font-label-sm text-label-sm pt-2">
+<span>Il y a 30 jours</span>
+<span>Il y a 15 jours</span>
+<span class="text-primary font-bold">Aujourd'hui (Pic)</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-lg mt-space-md border-t border-surface-container-high/60">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded bg-primary"></span>
+<span class="font-body-sm text-body-sm text-secondary">Devis confirmés avec acompte</span>
+</div>
+<a class="font-label-md text-label-md text-primary hover:underline flex items-center gap-1" href="#">
+<span>Consulter les statistiques complètes</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Most Configured Products (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Produits les plus configurés</h3>
+<p class="font-body-sm text-body-sm text-secondary">Répartition sur le catalogue actif</p>
+</div>
+<span class="px-space-xs py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Total 150 config</span>
+</div>
+<!-- Product Item 1 -->
+<div class="flex flex-col gap-1 py-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary font-bold text-label-sm">
+                  1
+                </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Baie accordéon Bois-Alu</span>
+<span class="font-body-sm text-body-sm text-secondary">42 configurations</span>
+</div>
+</div>
+<span class="font-label-md text-label-md text-primary font-bold">28%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 28%"></div>
+</div>
+</div>
+<!-- Product Item 2 -->
+<div class="flex flex-col gap-1 py-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary font-bold text-label-sm">
+                  2
+                </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Smart-Slide PVC</span>
+<span class="font-body-sm text-body-sm text-secondary">31 configurations</span>
+</div>
+</div>
+<span class="font-label-md text-label-md text-primary font-bold">20%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 20%"></div>
+</div>
+</div>
+<!-- Product Item 3 -->
+<div class="flex flex-col gap-1 py-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary font-bold text-label-sm">
+                  3
+                </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Coulissante à translation</span>
+<span class="font-body-sm text-body-sm text-secondary">24 configurations</span>
+</div>
+</div>
+<span class="font-label-md text-label-md text-primary font-bold">16%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-fixed-dim h-full rounded-full" style="width: 16%"></div>
+</div>
+</div>
+<!-- Product Item 4 -->
+<div class="flex flex-col gap-1 py-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary font-bold text-label-sm">
+                  4
+                </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Fenêtre à frappe</span>
+<span class="font-body-sm text-body-sm text-secondary">18 configurations</span>
+</div>
+</div>
+<span class="font-label-md text-label-md text-primary font-bold">12%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary-fixed-dim h-full rounded-full" style="width: 12%"></div>
+</div>
+</div>
+</div>
+<button class="w-full mt-4 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors text-center" type="button">
+          Gérer les modèles du catalogue
+        </button>
+</div>
+</div>
+<!-- 5. Operational Alerts & Pending Tasks Section -->
+<div class="w-full bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-3 h-3 rounded-full bg-error animate-pulse"></div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Tâches à traiter</h3>
+<span class="px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">5 prioritaires</span>
+</div>
+<button class="font-label-md text-label-md text-secondary hover:text-on-surface" type="button">
+          Tout marquer comme lu
+        </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Task 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div class="flex items-start gap-space-sm">
+<div class="p-2 rounded-lg bg-error-container text-on-error-container shrink-0">
+<span class="material-symbols-outlined text-[20px]">price_change</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface block">Prix manquants</span>
+<p class="font-body-sm text-body-sm text-secondary mt-1">2 produits ont des grilles incomplètes sans tarif m².</p>
+</div>
+</div>
+<button class="mt-space-md w-full py-1.5 px-space-md rounded-lg bg-surface-container-lowest text-primary hover:bg-primary hover:text-on-primary transition-colors font-label-md text-label-md shadow-sm" type="button">
+            Corriger
+          </button>
+</div>
+<!-- Task 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div class="flex items-start gap-space-sm">
+<div class="p-2 rounded-lg bg-secondary-container text-on-secondary-container shrink-0">
+<span class="material-symbols-outlined text-[20px]">add_photo_alternate</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface block">Visuel manquant</span>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Option "Poignée inox brossé" sans illustration 3D.</p>
+</div>
+</div>
+<button class="mt-space-md w-full py-1.5 px-space-md rounded-lg bg-surface-container-lowest text-primary hover:bg-primary hover:text-on-primary transition-colors font-label-md text-label-md shadow-sm" type="button">
+            Ajouter une image
+          </button>
+</div>
+<!-- Task 3 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div class="flex items-start gap-space-sm">
+<div class="p-2 rounded-lg bg-secondary-fixed text-on-secondary-fixed-variant shrink-0">
+<span class="material-symbols-outlined text-[20px]">rule</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface block">Règles en conflit</span>
+<p class="font-body-sm text-body-sm text-secondary mt-1">3 règles d'incompatibilité bloquent le volet roulant solaire.</p>
+</div>
+</div>
+<button class="mt-space-md w-full py-1.5 px-space-md rounded-lg bg-surface-container-lowest text-primary hover:bg-primary hover:text-on-primary transition-colors font-label-md text-label-md shadow-sm" type="button">
+            Voir les conflits
+          </button>
+</div>
+<!-- Task 4 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div class="flex items-start gap-space-sm">
+<div class="p-2 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed shrink-0">
+<span class="material-symbols-outlined text-[20px]">mark_email_read</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface block">Paniers chauds</span>
+<p class="font-body-sm text-body-sm text-secondary mt-1">5 devis abandonnés de plus de 3 000 € en attente.</p>
+</div>
+</div>
+<button class="mt-space-md w-full py-1.5 px-space-md rounded-lg bg-surface-container-lowest text-primary hover:bg-primary hover:text-on-primary transition-colors font-label-md text-label-md shadow-sm" type="button">
+            Relancer
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- 6. Floating Onboarding Banner / Tour Drawer (Interactive & Dismissible) -->
+<div class="fixed bottom-6 right-6 z-50 max-w-md w-full bg-inverse-surface text-inverse-on-surface p-space-md rounded-xl shadow-2xl transition-all duration-300 flex flex-col gap-space-sm" id="floating-tour-banner">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div class="flex flex-col">
+<h4 class="font-label-lg text-label-lg text-inverse-on-surface leading-tight">Bienvenue sur Fenêtres Pro !</h4>
+<span class="font-body-sm text-body-sm text-outline-variant">Découvrez votre nouvel espace en 4 étapes clés</span>
+</div>
+</div>
+<button class="text-outline-variant hover:text-inverse-on-surface transition-colors p-1" id="btn-close-tour" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-secondary">
+<span class="font-label-sm text-label-sm text-outline-variant">Prêt en 2 min</span>
+<div class="flex items-center gap-2">
+<button class="font-label-md text-label-md text-outline-variant hover:text-inverse-on-surface px-space-xs py-1" id="btn-dismiss-tour" type="button">
+          Plus tard
+        </button>
+<button class="font-label-md text-label-md px-space-md py-1.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container transition-colors shadow-sm" id="btn-start-interactive-tour" type="button">
+          Démarrer le tour
+        </button>
+</div>
+</div>
+</div>
+<!-- Interactive Guided Tour Modal Overlay (Triggered by tour buttons) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden items-center justify-center p-4" id="tour-modal">
+<div class="bg-surface-container-lowest max-w-lg w-full rounded-2xl p-space-xl shadow-2xl flex flex-col gap-space-lg relative animate-in fade-in zoom-in-95 duration-200">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary font-bold text-center text-label-sm flex items-center justify-center" id="tour-step-number">1</span>
+<span class="font-label-md text-label-md text-secondary">Étape sur 4</span>
+</div>
+<button class="text-secondary hover:text-on-surface" id="btn-close-modal" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="font-headline-md text-headline-md text-on-surface" id="tour-step-title">Configuration en direct</h3>
+<p class="font-body-md text-body-md text-on-surface-variant" id="tour-step-desc">
+          Chaque fenêtre ou baie vitrée créée possède son configurateur réactif. Visualisez en temps réel les cotes, finitions et compatibilités thermiques.
+        </p>
+</div>
+<div class="flex items-center justify-between pt-space-sm border-t border-surface-container">
+<button class="px-space-md py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md opacity-50 cursor-not-allowed" disabled="" id="btn-modal-prev" type="button">
+          Précédent
+        </button>
+<button class="px-space-lg py-2 rounded-lg bg-primary text-on-primary hover:bg-primary-container transition-all font-label-md text-label-md shadow-sm" id="btn-modal-next" type="button">
+          Suivant
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Tour Data & Dynamic Walkthrough Controller
+  const tourSteps = [
+    {
+      title: "1. Configurateur en direct",
+      desc: "Chaque fenêtre ou baie vitrée créée possède son configurateur réactif. Visualisez en temps réel les cotes, finitions et compatibilités thermiques."
+    },
+    {
+      title: "2. Grilles tarifaires dynamiques",
+      desc: "Importez vos matrices Excel de prix fabricants ou configurez vos formules de calcul sur mesure au centimètre près."
+    },
+    {
+      title: "3. Moteur d'incompatibilités",
+      desc: "Évitez les erreurs d'atelier : interdisez automatiquement les combinaisons impossibles (ex: vitrage acoustique trop lourd sur profil ouvrant réduit)."
+    },
+    {
+      title: "4. Suivi et devis automatisés",
+      desc: "Générez instantanément des devis clients en PDF et recevez les bons de commande validés directement connectés à votre production."
+    }
+  ];
+
+  let currentTourStep = 0;
+
+  const tourModal = document.getElementById('tour-modal');
+  const floatingBanner = document.getElementById('floating-tour-banner');
+  const modalTitle = document.getElementById('tour-step-title');
+  const modalDesc = document.getElementById('tour-step-desc');
+  const modalStepNum = document.getElementById('tour-step-number');
+  const btnPrev = document.getElementById('btn-modal-prev');
+  const btnNext = document.getElementById('btn-modal-next');
+
+  function updateModalStep() {
+    modalTitle.textContent = tourSteps[currentTourStep].title;
+    modalDesc.textContent = tourSteps[currentTourStep].desc;
+    modalStepNum.textContent = currentTourStep + 1;
+
+    if (currentTourStep === 0) {
+      btnPrev.disabled = true;
+      btnPrev.classList.add('opacity-50', 'cursor-not-allowed');
+    } else {
+      btnPrev.disabled = false;
+      btnPrev.classList.remove('opacity-50', 'cursor-not-allowed');
+    }
+
+    if (currentTourStep === tourSteps.length - 1) {
+      btnNext.textContent = "Terminer le tour";
+    } else {
+      btnNext.textContent = "Suivant";
+    }
+  }
+
+  function openTour() {
+    currentTourStep = 0;
+    updateModalStep();
+    tourModal.classList.remove('hidden');
+    tourModal.classList.add('flex');
+  }
+
+  function closeTour() {
+    tourModal.classList.add('hidden');
+    tourModal.classList.remove('flex');
+  }
+
+  document.getElementById('btn-start-interactive-tour')?.addEventListener('click', openTour);
+  document.getElementById('btn-launch-tour-header')?.addEventListener('click', openTour);
+  document.getElementById('btn-close-modal')?.addEventListener('click', closeTour);
+
+  document.getElementById('btn-close-tour')?.addEventListener('click', () => {
+    floatingBanner.style.display = 'none';
+  });
+
+  document.getElementById('btn-dismiss-tour')?.addEventListener('click', () => {
+    floatingBanner.style.display = 'none';
+  });
+
+  btnNext?.addEventListener('click', () => {
+    if (currentTourStep < tourSteps.length - 1) {
+      currentTourStep++;
+      updateModalStep();
+    } else {
+      closeTour();
+      floatingBanner.style.display = 'none';
+    }
+  });
+
+  btnPrev?.addEventListener('click', () => {
+    if (currentTourStep > 0) {
+      currentTourStep--;
+      updateModalStep();
+    }
+  });
+
+  // Checklist interactive update
+  const checkboxes = document.querySelectorAll('.step-checkbox');
+  const progressBar = document.getElementById('checklist-progress-bar');
+
+  checkboxes.forEach((cb) => {
+    cb.addEventListener('change', () => {
+      const checkedCount = document.querySelectorAll('.step-checkbox:checked').length;
+      const totalCount = checkboxes.length;
+      const pct = Math.round((checkedCount / totalCount) * 100);
+      progressBar.style.width = pct + '%';
+      
+      const labelSpan = cb.nextElementSibling;
+      if (cb.checked) {
+        labelSpan.classList.add('line-through', 'opacity-70');
+      } else {
+        labelSpan.classList.remove('line-through', 'opacity-70');
+      }
+    });
+  });
+
+  // Action button micro-feedback
+  document.getElementById('btn-create-product')?.addEventListener('click', () => {
+    openTour();
+  });
+</script></main></div></body></html>

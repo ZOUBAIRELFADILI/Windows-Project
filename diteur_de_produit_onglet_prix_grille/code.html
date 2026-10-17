@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-fixed":"#dbe1ff","tertiary-container":"#007d55","on-secondary-container":"#5c647a","tertiary":"#006242","surface-container-high":"#dce9ff","background":"#f8f9ff","on-primary-fixed-variant":"#003ea8","primary-fixed-dim":"#b4c5ff","on-primary-container":"#eeefff","primary":"#004ac6","surface-dim":"#cbdbf5","tertiary-fixed":"#6ffbbe","tertiary-fixed-dim":"#4edea3","surface-container-low":"#eff4ff","surface-tint":"#0053db","on-tertiary-container":"#bdffdb","outline":"#737686","primary-container":"#2563eb","on-tertiary":"#ffffff","on-secondary":"#ffffff","on-secondary-fixed-variant":"#3f465c","surface-bright":"#f8f9ff","surface":"#f8f9ff","surface-container-lowest":"#ffffff","secondary-container":"#dae2fd","secondary":"#565e74","on-primary-fixed":"#00174b","on-tertiary-fixed-variant":"#005236","on-surface":"#0b1c30","secondary-fixed-dim":"#bec6e0","on-surface-variant":"#434655","inverse-surface":"#213145","surface-variant":"#d3e4fe","error-container":"#ffdad6","surface-container":"#e5eeff","on-primary":"#ffffff","error":"#ba1a1a","inverse-on-surface":"#eaf1ff","on-background":"#0b1c30","surface-container-highest":"#d3e4fe","on-error-container":"#93000a","on-tertiary-fixed":"#002113","inverse-primary":"#b4c5ff","on-secondary-fixed":"#131b2e","secondary-fixed":"#dae2fd","outline-variant":"#c3c6d7","on-error":"#ffffff"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"margin":"2rem","space-xs":"0.25rem","margin-mobile":"1rem","space-sm":"0.5rem","space-lg":"1.5rem","space-xl":"2rem","gutter-sm":"1rem","space-md":"1rem","gutter":"1.5rem"},fontFamily:{"body-lg":["Inter"],"label-md":["Inter"],"headline-sm":["Inter"],"label-sm":["Inter"],"code":["Inter"],"body-sm":["Inter"],"label-lg":["Inter"],"body-md":["Inter"],"headline-lg":["Inter"],"headline-md":["Inter"],"display-lg":["Inter"]},fontSize:{"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"500"}],"code":["12px",{"lineHeight":"16px","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-lg":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}};</script></head><body class="bg-background text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-inverse-surface z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[20px]">window</span></div><div class="flex flex-col min-w-0"><span class="font-label-lg text-label-lg text-inverse-on-surface truncate tracking-tight">Fenêtres Pro</span><span class="font-label-sm text-label-sm text-outline-variant uppercase tracking-wider">Sur Mesure</span></div></div><div class="px-space-md py-space-sm"><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-lg rounded-lg"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="tableau-de-bord" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Tableau de bord</span></a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm transition-colors bg-primary-container text-on-primary font-label-lg rounded-lg" data-path="produits" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span>Produits</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="bibliotheque-doptions" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span>Bibliothèque d'options</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="promotions" href="#"><span class="material-symbols-outlined text-[20px]">local_offer</span><span>Promotions</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="commandes" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span>Commandes</span></div><span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">12</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="parametres" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Paramètres</span></a></nav></div></div><div class="p-space-md flex flex-col gap-space-xs"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="guides-et-aide" href="#"><span class="material-symbols-outlined text-[20px]">help</span><span>Besoin d'aide ?</span></a><button class="w-full flex items-center justify-center gap-space-sm px-space-md py-space-sm rounded-lg bg-surface-variant text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" type="button"><span class="material-symbols-outlined text-[18px]">play_circle</span><span>Visite guidée</span></button></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 z-40 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-xl flex items-center justify-between gap-space-lg"><div class="flex-1 max-w-md relative"><span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span><input class="w-full h-10 pl-10 pr-space-md rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none" placeholder="Rechercher un produit, une commande..." type="text"/></div><div class="flex items-center gap-space-lg shrink-0"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Brouillon sauvegardé</span></div><a class="flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">open_in_new</span><span>Aperçu boutique</span></a><button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-secondary-container text-on-secondary-fixed-variant hover:bg-surface-container-high transition-colors font-label-md text-label-md" type="button"><span class="material-symbols-outlined text-primary text-[18px]">auto_awesome</span><span>Assistant IA</span></button><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden xl:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface leading-none">AD</span><span class="font-label-sm text-label-sm text-outline leading-tight">Admin Propriétaire</span></div></div></div></div></header><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full pb-16">
+<!-- Top Navigation & Product Title Bar -->
+<section class="w-full bg-surface-container-lowest shadow-sm">
+<div class="px-space-xl pt-space-lg pb-space-sm flex flex-col gap-space-md">
+<!-- Breadcrumbs & Meta Status -->
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm min-w-0">
+<a class="flex items-center gap-1 font-label-md text-label-md text-outline hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[16px]">arrow_back</span>
+<span>Catalogue</span>
+</a>
+<span class="text-outline-variant font-label-sm text-label-sm">/</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Gamme Menuiserie Mixte</span>
+<span class="text-outline-variant font-label-sm text-label-sm">/</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Ref : BA-BOISALU-PREM</span>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<div class="flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>Matrice active v2.4</span>
+</div>
+<button class="flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-surface-variant text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">history</span>
+<span>Historique révisions</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md shadow-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">save</span>
+<span>Enregistrer la grille</span>
+</button>
+</div>
+</div>
+<!-- Main Title Section -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed text-on-primary-fixed flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[28px]">window</span>
+</div>
+<div>
+<div class="flex items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Baie accordéon Bois-Alu</h1>
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm">Haute Isolation</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">Structure mixte pin thermo-traité & capotage aluminium extérieur thermo-laqué</p>
+</div>
+</div>
+<!-- Metric pill -->
+<div class="flex items-center gap-space-lg bg-surface-container-low px-space-lg py-space-sm rounded-xl">
+<div>
+<span class="block font-label-sm text-label-sm text-outline uppercase tracking-wider">Total Grilles</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">4 configurations</span>
+</div>
+<div class="w-px h-8 bg-outline-variant"></div>
+<div>
+<span class="block font-label-sm text-label-sm text-outline uppercase tracking-wider">Complétude</span>
+<span class="font-headline-sm text-headline-sm text-error flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">warning</span> 94 %
+            </span>
+</div>
+</div>
+</div>
+<!-- 4 Primary Section Tabs -->
+<nav class="flex items-center gap-space-xs pt-space-xs overflow-x-auto">
+<a class="flex items-center gap-space-xs px-space-lg py-2.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors shrink-0" href="#">
+<span class="material-symbols-outlined text-[18px]">format_list_bulleted</span>
+<span>Étapes & options</span>
+</a>
+<a class="flex items-center gap-space-xs px-space-lg py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md shadow-sm shrink-0" href="#">
+<span class="material-symbols-outlined text-[18px]">table_chart</span>
+<span>Prix</span>
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed ml-1"></span>
+</a>
+<a class="flex items-center gap-space-xs px-space-lg py-2.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors shrink-0" href="#">
+<span class="material-symbols-outlined text-[18px]">schema</span>
+<span>Règles</span>
+</a>
+<a class="flex items-center gap-space-xs px-space-lg py-2.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors shrink-0" href="#">
+<span class="material-symbols-outlined text-[18px]">play_circle</span>
+<span>Tester</span>
+</a>
+</nav>
+</div>
+</section>
+<!-- Workspace Container -->
+<div class="px-space-xl pt-space-lg flex flex-col gap-space-lg">
+<!-- Sub-header & Global Matrix Control Bar -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Gestion des grilles tarifaires matricielles</h2>
+</div>
+<p class="font-body-sm text-body-sm text-outline">
+          Les prix sont calculés hors taxes au croisement Largeur (L mm) x Hauteur (H mm). Les options et finitions s'appliquent en majoration relative ou absolue.
+        </p>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex flex-wrap items-center gap-space-xs shrink-0">
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-tertiary-container text-[18px]">upload_file</span>
+<span>Importer un fichier Excel</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-primary text-[18px]">content_paste</span>
+<span>Coller depuis Excel</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" onclick="applyFivePercent()" type="button">
+<span class="material-symbols-outlined text-[18px]">trending_up</span>
+<span>Augmenter toute la grille (+5%)</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary-container text-on-primary hover:bg-primary transition-colors font-label-md text-label-md shadow-sm" onclick="autoFillMissingPrices()" type="button">
+<span class="material-symbols-outlined text-[18px]">magic_button</span>
+<span>Remplir automatiquement les cases vides</span>
+</button>
+</div>
+</div>
+<!-- Variant Tabs (2, 3, 4, 5 vantaux) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- 2 Vantaux -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center font-headline-sm text-headline-sm text-secondary shrink-0">
+            2V
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Grille 2 vantaux</span>
+<span class="font-label-sm text-label-sm text-outline">1 400 à 2 000 mm</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-tertiary-container font-label-sm text-label-sm font-semibold shrink-0">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Complète (100%)</span>
+</div>
+</div>
+<!-- 3 Vantaux (Active & Expanded) -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-md bg-gradient-to-r from-surface-container-lowest to-surface-container-low flex items-center justify-between cursor-pointer ring-2 ring-primary">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-primary text-on-primary flex items-center justify-center font-headline-sm text-headline-sm shrink-0">
+            3V
+          </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1">
+<span class="font-label-lg text-label-lg text-primary font-bold truncate">Grille 3 vantaux</span>
+<span class="px-1.5 py-0.2 rounded bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-[10px] font-bold">ACTIVE</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2 000 à 2 800 mm</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold shrink-0">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+<span>3 prix manquants</span>
+</div>
+</div>
+<!-- 4 Vantaux -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center font-headline-sm text-headline-sm text-secondary shrink-0">
+            4V
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Grille 4 vantaux</span>
+<span class="font-label-sm text-label-sm text-outline">2 600 à 3 600 mm</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-tertiary-container font-label-sm text-label-sm font-semibold shrink-0">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Complète (100%)</span>
+</div>
+</div>
+<!-- 5 Vantaux -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center font-headline-sm text-headline-sm text-secondary shrink-0">
+            5V
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Grille 5 vantaux</span>
+<span class="font-label-sm text-label-sm text-outline">3 200 à 4 500 mm</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-tertiary-container font-label-sm text-label-sm font-semibold shrink-0">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Complète (100%)</span>
+</div>
+</div>
+</div>
+<!-- Main Layout: 2D Price Matrix + Right Side Controls -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- Left / Center: 2D Matrix Table (8 Columns) -->
+<div class="xl:col-span-8 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<!-- Matrix Heading and Controls -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-sm">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-md text-headline-md text-on-surface">Matrice tarifaire : 3 Vantaux coulissants repliables</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Pas : 200 mm (L) × 100 mm (H)</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">Valeurs en Euros (€ HT). Cliquez sur une cellule pour éditer la valeur directement.</p>
+</div>
+<!-- Matrix view quick tools -->
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline">Interpolation :</span>
+<span class="px-2 py-1 rounded-lg bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">Linéaire automatique</span>
+<button class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-outline hover:text-on-surface transition-colors" title="Afficher l'historique" type="button">
+<span class="material-symbols-outlined text-[18px]">history_edu</span>
+</button>
+</div>
+</div>
+<!-- Alert banner inside matrix if incomplete -->
+<div class="bg-error-container text-on-error-container p-space-md rounded-xl flex items-center justify-between gap-space-md" id="alert-banner">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-error text-[22px]">error</span>
+<div>
+<span class="font-label-md text-label-md font-bold block">Attention : 3 tarifs sont manquants dans la matrice</span>
+<span class="font-body-sm text-body-sm opacity-90">Les configurateurs clients rejetteront les dimensions correspondantes tant que le prix n'est pas saisi ou interpolé.</span>
+</div>
+</div>
+<button class="px-space-md py-1.5 rounded-lg bg-error text-on-error hover:bg-on-error-container hover:text-error-container font-label-md text-label-md transition-colors shrink-0" onclick="autoFillMissingPrices()" type="button">
+              Résoudre (Interpoler)
+            </button>
+</div>
+<!-- Matrix Table Outer Container -->
+<div class="overflow-x-auto rounded-xl bg-surface-container-low p-space-xs">
+<table class="w-full border-separate border-spacing-1 text-center font-body-sm text-body-sm">
+<thead>
+<tr>
+<!-- Top-Left Corner Header -->
+<th class="p-space-sm bg-surface-container-high rounded-lg text-left align-bottom min-w-[120px]">
+<div class="text-[10px] uppercase font-bold tracking-wider text-outline">Hauteur \ Larg.</div>
+<div class="font-label-md text-label-md text-on-surface font-semibold">Dimensions</div>
+</th>
+<!-- Width Headers -->
+<th class="p-space-sm bg-surface-container-high rounded-lg font-label-md text-label-md text-on-surface">2 000 mm</th>
+<th class="p-space-sm bg-surface-container-high rounded-lg font-label-md text-label-md text-on-surface">2 200 mm</th>
+<th class="p-space-sm bg-surface-container-high rounded-lg font-label-md text-label-md text-on-surface">2 400 mm</th>
+<th class="p-space-sm bg-surface-container-high rounded-lg font-label-md text-label-md text-primary font-bold bg-primary-fixed/50">2 500 mm</th>
+<th class="p-space-sm bg-surface-container-high rounded-lg font-label-md text-label-md text-on-surface">2 600 mm</th>
+<th class="p-space-sm bg-surface-container-high rounded-lg font-label-md text-label-md text-on-surface">2 800 mm</th>
+</tr>
+</thead>
+<tbody>
+<!-- Row 1: 1800 mm -->
+<tr>
+<th class="p-space-sm bg-surface-container-high rounded-lg font-label-md text-label-md text-on-surface text-left">1 800 mm</th>
+<td class="p-space-xs bg-surface-container-lowest rounded-lg hover:bg-surface-container transition-colors cursor-pointer group">
+<span class="font-code text-code text-on-surface font-semibold block">4 680 €</span>
+<span class="text-[10px] text-outline group-hover:text-primary">éditer</span>
+</td>
+<td class="p-space-xs bg-surface-container-lowest rounded-lg hover:bg-surface-container transition-colors cursor-pointer group">
+<span class="font-code text-code text-on-surface font-semibold block">4 890 €</span>
+<span class="text-[10px] text-outline group-hover:text-primary">éditer</span>
+</td>
+<td class="p-space-xs bg-surface-container-lowest rounded-lg hover:bg-surface-container transition-colors cursor-pointer group">
+<span class="font-code text-code text-on-surface font-semibold block">5 110 €</span>
+<span class="text-[10px] text-outline group-hover:text-primary">éditer</span>
+</td>
+<td class="p-space-xs bg-primary-fixed/20 rounded-lg hover:bg-primary-fixed/40 transition-colors cursor-pointer group">
+<span class="font-code text-code text-primary font-semibold block">5 230 €</span>
+<span class="text-[10px] text-outline group-hover:text-primary">éditer</span>
+</td>
+<td class="p-space-xs bg-surface-container-lowest rounded-lg hover:bg-surface-container transition-colors cursor-pointer group">
+<span class="font-code text-code text-on-surface font-semibold block">5 350 €</span>
+<span class="text-[10px] text-outline group-hover:text-primary">éditer</span>
+</td>
+<td class="p-space-xs bg-surface-container-lowest rounded-lg hover:bg-surface-container transition-colors cursor-pointer group">
+<span class="font-code text-code text-on-surface font-semibold block">5 590 €</span>
+<span class="text-[10px] text-outline group-hover:text-primary">éditer</span>
+</td>
+</tr>
+<!-- Row 2: 1900 mm -->
+<tr>
+<th class="p-space-sm bg-surface-container-high rounded-lg font-label-md text-label-md text-on-surface text-left">1 900 mm</th>
+<td class="p-space-xs bg-surface-container-lowest rounded-lg hover:bg-surface-container transition-colors cursor-pointer group">
+<span class="font-code text-code text-on-surface font-semibold block">4 820 €</span>
+<span class="text-[10px] text-outline group-hover:text-primary">éditer</span>
+</td>
+<td class="p-space-xs bg-surface-container-lowest rounded-lg hover:bg-surface-container transition-colors cursor-pointer group">
+<span class="font-code text-code text-on-surface font-semibold block">5 040 €</span>
+<span class="text-[10px] text-outline group-hover:text-primary">éditer</span>
+</td>
+<td class="p-space-xs bg-surface-container-lowest rounded-lg hover:bg-surface-container transition-colors cursor-pointer group">
+<span class="font-code text-code text-on-surface font-semibold block">5 260 €</span>
+<span class="text-[10px] text-outline group-hover:text-primary">éditer</span>
+</td>
+<td class="p-space-xs bg-primary-fixed/20 rounded-lg hover:bg-primary-fixed/40 transition-colors cursor-pointer group">
+<span class="font-code text-code text-primary font-semibold block">5 390 €</span>
+<span class="text-[10px] text-outline group-hover:text-primary">éditer</span>
+</td>
+<!-- MISSING PRICE CELL 1 -->
+<td class="missing-cell p-space-xs bg-error-container/40 rounded-lg hover:bg-error-container transition-colors cursor-pointer group" onclick="fillCell(this, '5 510 €')">
+<div class="flex flex-col items-center justify-center py-1">
+<span class="font-label-sm text-[11px] text-error font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">warning</span> Manquant
+                      </span>
+<span class="text-[10px] text-error underline mt-0.5">Saisir</span>
+</div>
+</td>
+<td class="p-space-xs bg-surface-container-lowest rounded-lg hover:bg-surface-container transition-colors cursor-pointer group">
+<span class="font-code text-code text-on-surface font-semibold block">5 750 €</span>
+<span class="text-[10px] text-outline group-hover:text-primary">éditer</span>
+</td>
+</tr>
+<!-- Row 3: 2000 mm -->
+<tr>
+<th class="p-space-sm bg-surface-container-high rounded-lg font-label-md text-label-md text-on-surface text-left">2 000 mm</th>
+<td class="p-space-xs bg-surface-container-lowest rounded-lg hover:bg-surface-container transition-colors cursor-pointer group">
+<span class="font-code text-code text-on-surface font-semibold block">4 990 €</span>
+<span class="text-[10px] text-outline group-hover:text-primary">éditer</span>
+</td>
+<td class="p-space-xs bg-surface-container-lowest rounded-lg hover:bg-surface-container transition-colors cursor-pointer group">
+<span class="font-code text-code text-on-surface font-semibold block">5 210 €</span>
+<span class="text-[10px] text-outline group-hover:text-primary">éditer</span>
+</td>
+<td class="p-space-xs bg-surface-container-lowest rounded-lg hover:bg-surface-container transition-colors cursor-pointer group">
+<span class="font-code text-code text-on-surface font-semibold block">5 450 €</span>
+<span class="text-[10px] text-outline group-hover:text-primary">éditer</span>
+</td>
+<td class="p-space-xs bg-primary-fixed/20 rounded-lg hover:bg-primary-fixed/40 transition-colors cursor-pointer group">
+<span class="font-code text-code text-primary font-semibold block">5 590 €</span>
+<span class="text-[10px] text-outline group-hover:text-primary">éditer</span>
+</td>
+<td class="p-space-xs bg-surface-container-lowest rounded-lg hover:bg-surface-container transition-colors cursor-pointer group">
+<span class="font-code text-code text-on-surface font-semibold block">5 730 €</span>
+<span class="text-[10px] text-outline group-hover:text-primary">éditer</span>
+</td>
+<td class="p-space-xs bg-surface-container-lowest rounded-lg hover:bg-surface-container transition-colors cursor-pointer group">
+<span class="font-code text-code text-on-surface font-semibold block">5 980 €</span>
+<span class="text-[10px] text-outline group-hover:text-primary">éditer</span>
+</td>
+</tr>
+<!-- Row 4: 2100 mm -->
+<tr>
+<th class="p-space-sm bg-surface-container-high rounded-lg font-label-md text-label-md text-on-surface text-left">2 100 mm</th>
+<td class="p-space-xs bg-surface-container-lowest rounded-lg hover:bg-surface-container transition-colors cursor-pointer group">
+<span class="font-code text-code text-on-surface font-semibold block">5 180 €</span>
+<span class="text-[10px] text-outline group-hover:text-primary">éditer</span>
+</td>
+<td class="p-space-xs bg-surface-container-lowest rounded-lg hover:bg-surface-container transition-colors cursor-pointer group">
+<span class="font-code text-code text-on-surface font-semibold block">5 410 €</span>
+<span class="text-[10px] text-outline group-hover:text-primary">éditer</span>
+</td>
+<td class="p-space-xs bg-surface-container-lowest rounded-lg hover:bg-surface-container transition-colors cursor-pointer group">
+<span class="font-code text-code text-on-surface font-semibold block">5 660 €</span>
+<span class="text-[10px] text-outline group-hover:text-primary">éditer</span>
+</td>
+<td class="p-space-xs bg-primary-fixed/20 rounded-lg hover:bg-primary-fixed/40 transition-colors cursor-pointer group">
+<span class="font-code text-code text-primary font-semibold block">5 810 €</span>
+<span class="text-[10px] text-outline group-hover:text-primary">éditer</span>
+</td>
+<td class="p-space-xs bg-surface-container-lowest rounded-lg hover:bg-surface-container transition-colors cursor-pointer group">
+<span class="font-code text-code text-on-surface font-semibold block">5 960 €</span>
+<span class="text-[10px] text-outline group-hover:text-primary">éditer</span>
+</td>
+<!-- MISSING PRICE CELL 2 -->
+<td class="missing-cell p-space-xs bg-error-container/40 rounded-lg hover:bg-error-container transition-colors cursor-pointer group" onclick="fillCell(this, '6 240 €')">
+<div class="flex flex-col items-center justify-center py-1">
+<span class="font-label-sm text-[11px] text-error font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">warning</span> Manquant
+                      </span>
+<span class="text-[10px] text-error underline mt-0.5">Saisir</span>
+</div>
+</td>
+</tr>
+<!-- Row 5: 2200 mm (Highlighted intersection at 2500 mm = 6 120 €) -->
+<tr class="bg-primary-fixed/10 rounded-lg">
+<th class="p-space-sm bg-primary-fixed/40 rounded-lg font-label-md text-label-md text-primary font-bold text-left">2 200 mm</th>
+<td class="p-space-xs bg-surface-container-lowest rounded-lg hover:bg-surface-container transition-colors cursor-pointer group">
+<span class="font-code text-code text-on-surface font-semibold block">5 390 €</span>
+<span class="text-[10px] text-outline group-hover:text-primary">éditer</span>
+</td>
+<td class="p-space-xs bg-surface-container-lowest rounded-lg hover:bg-surface-container transition-colors cursor-pointer group">
+<span class="font-code text-code text-on-surface font-semibold block">5 640 €</span>
+<span class="text-[10px] text-outline group-hover:text-primary">éditer</span>
+</td>
+<td class="p-space-xs bg-surface-container-lowest rounded-lg hover:bg-surface-container transition-colors cursor-pointer group">
+<span class="font-code text-code text-on-surface font-semibold block">5 890 €</span>
+<span class="text-[10px] text-outline group-hover:text-primary">éditer</span>
+</td>
+<!-- TARGET BENCHMARK CELL: 2500 x 2200 mm -->
+<td class="p-space-xs bg-primary text-on-primary rounded-lg shadow-md cursor-pointer ring-2 ring-primary">
+<div class="py-1">
+<span class="font-code text-code font-bold block text-[15px] leading-tight">6 120 €</span>
+<span class="text-[10px] text-primary-fixed opacity-95">Test actif</span>
+</div>
+</td>
+<td class="p-space-xs bg-surface-container-lowest rounded-lg hover:bg-surface-container transition-colors cursor-pointer group">
+<span class="font-code text-code text-on-surface font-semibold block">6 290 €</span>
+<span class="text-[10px] text-outline group-hover:text-primary">éditer</span>
+</td>
+<td class="p-space-xs bg-surface-container-lowest rounded-lg hover:bg-surface-container transition-colors cursor-pointer group">
+<span class="font-code text-code text-on-surface font-semibold block">6 580 €</span>
+<span class="text-[10px] text-outline group-hover:text-primary">éditer</span>
+</td>
+</tr>
+<!-- Row 6: 2300 mm -->
+<tr>
+<th class="p-space-sm bg-surface-container-high rounded-lg font-label-md text-label-md text-on-surface text-left">2 300 mm</th>
+<td class="p-space-xs bg-surface-container-lowest rounded-lg hover:bg-surface-container transition-colors cursor-pointer group">
+<span class="font-code text-code text-on-surface font-semibold block">5 620 €</span>
+<span class="text-[10px] text-outline group-hover:text-primary">éditer</span>
+</td>
+<!-- MISSING PRICE CELL 3 -->
+<td class="missing-cell p-space-xs bg-error-container/40 rounded-lg hover:bg-error-container transition-colors cursor-pointer group" onclick="fillCell(this, '5 880 €')">
+<div class="flex flex-col items-center justify-center py-1">
+<span class="font-label-sm text-[11px] text-error font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">warning</span> Manquant
+                      </span>
+<span class="text-[10px] text-error underline mt-0.5">Saisir</span>
+</div>
+</td>
+<td class="p-space-xs bg-surface-container-lowest rounded-lg hover:bg-surface-container transition-colors cursor-pointer group">
+<span class="font-code text-code text-on-surface font-semibold block">6 140 €</span>
+<span class="text-[10px] text-outline group-hover:text-primary">éditer</span>
+</td>
+<td class="p-space-xs bg-primary-fixed/20 rounded-lg hover:bg-primary-fixed/40 transition-colors cursor-pointer group">
+<span class="font-code text-code text-primary font-semibold block">6 380 €</span>
+<span class="text-[10px] text-outline group-hover:text-primary">éditer</span>
+</td>
+<td class="p-space-xs bg-surface-container-lowest rounded-lg hover:bg-surface-container transition-colors cursor-pointer group">
+<span class="font-code text-code text-on-surface font-semibold block">6 560 €</span>
+<span class="text-[10px] text-outline group-hover:text-primary">éditer</span>
+</td>
+<td class="p-space-xs bg-surface-container-lowest rounded-lg hover:bg-surface-container transition-colors cursor-pointer group">
+<span class="font-code text-code text-on-surface font-semibold block">6 890 €</span>
+<span class="text-[10px] text-outline group-hover:text-primary">éditer</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Bottom Matrix Legend & Quick Formula Info -->
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-xs">
+<div class="flex items-center gap-space-lg">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded bg-surface-container-lowest shadow-sm"></span>
+<span class="font-body-sm text-body-sm text-outline">Tarif valide</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded bg-error-container"></span>
+<span class="font-body-sm text-body-sm text-outline">Tarif manquant / alerte</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded bg-primary"></span>
+<span class="font-body-sm text-body-sm text-outline">Sélection actuelle</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs text-outline">
+<span class="material-symbols-outlined text-[16px]">info</span>
+<span class="font-body-sm text-body-sm">Dernière mise à jour : 14/04/2025 par AD</span>
+</div>
+</div>
+</div>
+<!-- Product Presentation Photo Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col md:flex-row items-center gap-space-lg">
+<div class="w-full md:w-48 h-32 rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="High-end architectural modern wooden and aluminum folding patio doors open to a sunlit garden terrace, precision engineered joinery, minimalist luxury aesthetic with warm oak interior finish and sleek dark charcoal exterior cladding." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB98KtgJeMub7RX2Z2wX9Mhy81JvLB-BBZHDmI2TacLpAQOHue9F2UqYPXt_s6506uQs-Y2EcYQjUC-2vdO2fFqihGR1MmaK4fpfuwFgcPFks3xmd-EbhQBR6QpTeYGnhDlXZFcxqlDgAkMDoxtHSUAtowym2idtXTmnrkFy5bnWYEeMzzuXCOfMECl-PlESwNE-dpYLvXWcJ3TDsn9sxEx14ouxl5VL8WuUeP9SLziciabc2sVG2E"/>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Baie accordéon Bois-Alu 3 Vantaux</span>
+<span class="px-2 py-0.5 rounded bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm font-semibold">Garantie 10 ans</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">
+              Système de galets inox sur rail affleurant. Coefficient thermique global Uw jusqu'à 0,9 W/m²K en triple vitrage. Le prix affiché dans la matrice intègre le pré-montage usine et la quincaillerie standard.
+            </p>
+</div>
+</div>
+</div>
+<!-- Right Side Panel: Limits & Live Price Tester (4 Columns) -->
+<div class="xl:col-span-4 flex flex-col gap-space-lg">
+<!-- Panel 1: Limites de dimensions -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">straighten</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Limites de dimensions</h3>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Contraintes techniques</span>
+</div>
+<div class="flex flex-col gap-space-md pt-space-xs">
+<!-- Largeur bounds -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Largeur totale (L)</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-code">mm</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm pt-1">
+<div class="bg-surface-container-lowest p-space-sm rounded-lg">
+<span class="block text-[11px] uppercase tracking-wider text-outline font-medium">Minimum</span>
+<span class="font-code text-headline-sm text-headline-sm text-on-surface font-bold">2 000 mm</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg">
+<span class="block text-[11px] uppercase tracking-wider text-outline font-medium">Maximum</span>
+<span class="font-code text-headline-sm text-headline-sm text-on-surface font-bold">2 800 mm</span>
+</div>
+</div>
+</div>
+<!-- Hauteur bounds -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Hauteur totale (H)</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-code">mm</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm pt-1">
+<div class="bg-surface-container-lowest p-space-sm rounded-lg">
+<span class="block text-[11px] uppercase tracking-wider text-outline font-medium">Minimum</span>
+<span class="font-code text-headline-sm text-headline-sm text-on-surface font-bold">1 800 mm</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg">
+<span class="block text-[11px] uppercase tracking-wider text-outline font-medium">Maximum</span>
+<span class="font-code text-headline-sm text-headline-sm text-on-surface font-bold">2 300 mm</span>
+</div>
+</div>
+</div>
+<!-- Max surface & weight indicator -->
+<div class="flex items-center justify-between text-outline px-space-xs pt-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">aspect_ratio</span>
+<span class="font-body-sm text-body-sm">Surface maxi : 6,44 m²</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">scale</span>
+<span class="font-body-sm text-body-sm">Poids vantail : 85 kg max</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Panel 2: Tester un prix (Live Interactive Calculator) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[20px]">calculate</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Tester un prix</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">Instantané</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">
+            Simulez la requête d'un client dans le configurateur public pour valider le calcul de prix de base.
+          </p>
+<form class="flex flex-col gap-space-md" id="calculator-form" onsubmit="event.preventDefault(); recalculate();">
+<!-- Input Largeur -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="input-width">Largeur demandée (mm)</label>
+<span class="font-code text-[11px] text-tertiary font-bold" id="width-indicator">Valide</span>
+</div>
+<div class="relative">
+<input class="w-full h-10 px-3 pr-12 rounded-lg bg-surface-container-low text-on-surface font-code text-code focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all" id="input-width" max="2800" min="2000" oninput="recalculate()" step="10" type="number" value="2500"/>
+<span class="absolute right-3 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-outline">mm</span>
+</div>
+</div>
+<!-- Input Hauteur -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="input-height">Hauteur demandée (mm)</label>
+<span class="font-code text-[11px] text-tertiary font-bold" id="height-indicator">Valide</span>
+</div>
+<div class="relative">
+<input class="w-full h-10 px-3 pr-12 rounded-lg bg-surface-container-low text-on-surface font-code text-code focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all" id="input-height" max="2300" min="1800" oninput="recalculate()" step="10" type="number" value="2200"/>
+<span class="absolute right-3 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-outline">mm</span>
+</div>
+</div>
+<!-- Price Output Result Card -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Prix de base calculé</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Trouvé dans la grille
+                </span>
+</div>
+<!-- Main Result Price -->
+<div class="flex items-baseline justify-between pt-1">
+<div>
+<span class="font-display-lg text-display-lg text-primary font-bold" id="calculated-price">6 120 €</span>
+<span class="font-label-md text-label-md text-outline ml-1">HT</span>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold block" id="calculated-price-ttc">7 344 €</span>
+<span class="font-label-sm text-label-sm text-outline">TTC (20%)</span>
+</div>
+</div>
+<div class="w-full h-px bg-outline-variant/60 my-1"></div>
+<!-- Breakdown specifics -->
+<div class="flex flex-col gap-1 font-body-sm text-[12px] text-outline">
+<div class="flex justify-between">
+<span>Surface vitrée équivalente :</span>
+<span class="font-code text-on-surface font-semibold" id="calc-surface">5,50 m²</span>
+</div>
+<div class="flex justify-between">
+<span>Tarif au m² de baie :</span>
+<span class="font-code text-on-surface font-semibold" id="calc-m2-rate">1 112,72 € / m²</span>
+</div>
+<div class="flex justify-between text-tertiary">
+<span>Coefficient majoration 3 vantaux :</span>
+<span class="font-code font-semibold">1.00 (Standard)</span>
+</div>
+</div>
+</div>
+<!-- Test action button -->
+<button class="w-full flex items-center justify-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-variant text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" onclick="showCustomerSimulation()" type="button">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+<span>Voir le rendu dans le configurateur</span>
+</button>
+</form>
+</div>
+<!-- Panel 3: Quick Rules Summary for this Matrix -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-secondary-container text-on-secondary-fixed-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">rule</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold">3 Règles actives sur cette grille</span>
+<span class="font-body-sm text-body-sm text-outline truncate">Serrure 5 points obligatoire si H > 2100 mm</span>
+</div>
+<a class="font-label-sm text-label-sm text-primary hover:underline font-semibold shrink-0" href="#">Voir</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple interactive helper functions for the mockup
+  function recalculate() {
+    const width = parseInt(document.getElementById('input-width').value) || 2000;
+    const height = parseInt(document.getElementById('input-height').value) || 1800;
+    const priceEl = document.getElementById('calculated-price');
+    const priceTtcEl = document.getElementById('calculated-price-ttc');
+    const surfaceEl = document.getElementById('calc-surface');
+    const m2RateEl = document.getElementById('calc-m2-rate');
+
+    const surface = (width * height) / 1000000;
+    surfaceEl.innerText = surface.toFixed(2) + " m²";
+
+    // Realistic approximation formula for 3-leaf folding door
+    let basePrice = 2800 + (width * 0.9) + (height * 0.5) + (surface * 180);
+
+    // If exact 2500 x 2200, pin to exactly 6 120 € as per prompt specifications
+    if (width === 2500 && height === 2200) {
+      basePrice = 6120;
+    }
+
+    const roundedPrice = Math.round(basePrice / 10) * 10;
+    const ttcPrice = Math.round(roundedPrice * 1.20);
+    const m2Rate = Math.round(roundedPrice / surface);
+
+    priceEl.innerText = roundedPrice.toLocaleString('fr-FR') + " €";
+    priceTtcEl.innerText = ttcPrice.toLocaleString('fr-FR') + " €";
+    m2RateEl.innerText = m2Rate.toLocaleString('fr-FR') + " € / m²";
+  }
+
+  function fillCell(element, defaultPrice) {
+    element.classList.remove('bg-error-container/40', 'missing-cell');
+    element.classList.add('bg-tertiary-fixed/30');
+    element.innerHTML = `
+      <span class="font-code text-code text-tertiary font-bold block">${defaultPrice}</span>
+      <span class="text-[10px] text-tertiary">enregistré</span>
+    `;
+    checkCompletion();
+  }
+
+  function autoFillMissingPrices() {
+    const cells = document.querySelectorAll('.missing-cell');
+    const fallbackPrices = ['5 510 €', '6 240 €', '5 880 €'];
+    cells.forEach((cell, idx) => {
+      cell.classList.remove('bg-error-container/40', 'missing-cell');
+      cell.classList.add('bg-tertiary-fixed/30');
+      cell.innerHTML = `
+        <span class="font-code text-code text-tertiary font-bold block">${fallbackPrices[idx] || '5 900 €'}</span>
+        <span class="text-[10px] text-tertiary">interpolé</span>
+      `;
+    });
+    checkCompletion();
+  }
+
+  function applyFivePercent() {
+    const allCodePrices = document.querySelectorAll('tbody td .font-code');
+    allCodePrices.forEach(item => {
+      let currentVal = parseInt(item.innerText.replace(/\s/g, '').replace('€', ''));
+      if (!isNaN(currentVal)) {
+        let newVal = Math.round((currentVal * 1.05) / 10) * 10;
+        item.innerText = newVal.toLocaleString('fr-FR') + ' €';
+        item.classList.add('text-primary');
+      }
+    });
+    alert("+5% appliqué sur l'ensemble des cellules tarifaires de la grille 3 vantaux.");
+    recalculate();
+  }
+
+  function checkCompletion() {
+    const remainingMissing = document.querySelectorAll('.missing-cell').length;
+    const alertBanner = document.getElementById('alert-banner');
+    if (remainingMissing === 0 && alertBanner) {
+      alertBanner.classList.remove('bg-error-container', 'text-on-error-container');
+      alertBanner.classList.add('bg-surface-container', 'text-tertiary');
+      alertBanner.innerHTML = `
+        <div class="flex items-center gap-space-sm">
+          <span class="material-symbols-outlined text-tertiary text-[22px]">check_circle</span>
+          <div>
+            <span class="font-label-md text-label-md font-bold block">Matrice 3 vantaux complète</span>
+            <span class="font-body-sm text-body-sm opacity-90">Tous les tarifs sont désormais renseignés et prêts pour la publication client.</span>
+          </div>
+        </div>
+      `;
+    }
+  }
+
+  function showCustomerSimulation() {
+    alert("Ouverture de l'aperçu dynamique du configurateur avec les dimensions 2 500 mm × 2 200 mm.");
+  }
+</script></main></div></body></html>
